@@ -1,0 +1,19 @@
+name: Deploy Workflow
+on:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        environment: production
+        steps:
+            - uses: actions/checkout@v4
+            - name: build
+              run: npm ci && npm run build
+            - name: Copy bundle via ssh
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USERNAME }}
+                  source: "dist"
+                  target: "./calendar-web/frontend"

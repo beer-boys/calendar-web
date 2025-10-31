@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . && stylelint \"**/*.css\"",
     "lint:fix-all": "eslint . --fix && stylelint \"**/*.css\" --fix",
-    "preview": "vite preview",
-    "prepare": "husky"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -35,7 +34,6 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7",
-    "vite-plugin-svgr": "^4.5.0",
-    "vite-plugin-typed-css-modules": "^0.4.0"
+    "vite-plugin-svgr": "^4.5.0"
   }
 }
