@@ -16,13 +16,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: "dist,nginx"
+          source: "dist"
           target: "./calendar-web/frontend"
-      - name: remote control
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          script: |
-            sudo docker stop nginx || true && sudo docker run --name nginx -v /home/github-runner/calendar-web/frontend/nginx/config:/etc/nginx/conf.d -v /home/github-runner/calendar-web/frontend/dist:/dist -p 80:80 --rm -d nginx
