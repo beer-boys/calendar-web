@@ -26,7 +26,6 @@ export function Calendar() {
         locale={ruLocale}
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
-        weekends={false}
         events={events}
         height="100%"
       />
