@@ -1,0 +1,9 @@
+.rootFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.fc) {
+  flex-grow: 1;
+}
