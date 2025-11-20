@@ -3,16 +3,20 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
 import { Box } from '@vkontakte/vkui';
 import { useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
+
+import { getCalendarEvents } from '@/modules/event/event.selectors';
 
 import styles from './Calendar.module.css';
 
 export function Calendar() {
   const calendarRef = useRef<FullCalendar>(null);
-
   useEffect(() => {
     // После первого рендера оно тормозит и не расширяет ряды календаря, поэтому вручную триггерим обновление размеров
     calendarRef.current?.getApi().updateSize();
   }, []);
+
+  const events = useSelector(getCalendarEvents);
 
   return (
     // Я пытался не нарушать семантику VKUI, но пришлось сделать Box flex-контейнером
@@ -23,7 +27,7 @@ export function Calendar() {
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
         weekends={false}
-        events={[{ title: 'Конец спринта 1', date: '2025-11-07' }]}
+        events={events}
         height="100%"
       />
     </Box>
