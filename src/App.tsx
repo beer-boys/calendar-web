@@ -1,34 +1,41 @@
-import './App.css';
+import ruLocale from '@fullcalendar/core/locales/ru';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import FullCalendar from '@fullcalendar/react';
+import { Icon24GearOutline } from '@vkontakte/icons';
+import { Button, Calendar, Checkbox, FormLayoutGroup } from '@vkontakte/vkui';
 
-import { useState } from 'react';
+import styles from './App.module.css';
 
-import viteLogo from '/vite.svg';
-
-import reactLogo from './assets/react.svg';
-
-function App() {
-  const [count, setCount] = useState(0);
-
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={styles.root}>
+      <div className={styles.sideBar}>
+        <div className={styles.logo}>
+          <span className={styles.logoFirstLetter}>X</span>-Calendar
+        </div>
+        <Button size="l">+ Создать</Button>
+        <Calendar />
+        <FormLayoutGroup mode="vertical">
+          <Checkbox name="meetings" defaultChecked>
+            Встречи
+          </Checkbox>
+          <Checkbox name="habbits" defaultChecked>
+            Привычки
+          </Checkbox>
+        </FormLayoutGroup>
+        <div className={styles.iconWrapper}>
+          <Icon24GearOutline />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className={styles.calendarWrapper}>
+        <FullCalendar
+          locale={ruLocale}
+          plugins={[dayGridPlugin]}
+          initialView="dayGridMonth"
+          weekends={false}
+          events={[{ title: 'Конец спринта 1', date: '2025-11-07' }]}
+        />
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    </div>
   );
 }
-
-export default App;
