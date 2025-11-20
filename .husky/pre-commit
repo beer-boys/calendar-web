@@ -1,6 +1,6 @@
 npm run lint:fix-all
 git diff --cached --name-only | while read -r file; do
-  if [ -f $file]; then
+  if [ -f "$file"]; then
     git add "$file"
   fi
 done
