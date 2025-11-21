@@ -1,11 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { eventReducer } from '@/modules/event/event.reducer';
+import { meetReducer } from '@/modules/meet/meet.reducer';
 import { modalReducer } from '@/modules/modal/modal.reducer';
 
 const reducer = combineReducers({
   modal: modalReducer,
-  event: eventReducer,
+  meet: meetReducer,
 });
 
 export type RootState = ReturnType<typeof reducer>;

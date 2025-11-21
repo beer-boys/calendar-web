@@ -2,7 +2,7 @@ import { Box, Button, DateInput, FormItem, FormLayoutGroup, Input, Title } from 
 import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { createCalendarEvent } from '@/modules/event/event.reducer';
+import { createMeet } from '@/modules/meet/meet.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { useFormField } from '@/utils/useFormField';
 
@@ -19,8 +19,8 @@ export const CreateItemModal = memo(function CreateItemModal() {
     }
 
     dispatch(
-      createCalendarEvent({
-        event: { title: name, date },
+      createMeet({
+        meet: { title: name, date: date.getTime() },
       }),
     );
 

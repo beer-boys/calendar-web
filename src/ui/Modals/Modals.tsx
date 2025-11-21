@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { closeModal, MODALS } from '@/modules/modal/modal.reducer';
 import { getActitveModal } from '@/modules/modal/modal.selectors';
-import { CreateItemModal } from '@/ui/Modals/CreateItemModal/CreateItemModal';
+import { CreateItemModal } from '@/ui/Modals/CreateMeetModal/CreateMeetModal';
 
 export const Modals = memo(function Modals() {
   const activeModal = useSelector(getActitveModal);

@@ -5,7 +5,7 @@ import { Box } from '@vkontakte/vkui';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getCalendarEvents } from '@/modules/event/event.selectors';
+import { getCalendarEvents } from '@/modules/calendarEvent/calendarEvent.selectors';
 
 import styles from './Calendar.module.css';
 
