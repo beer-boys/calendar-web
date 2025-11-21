@@ -14,7 +14,7 @@ export const Modals = memo(function Modals() {
 
   return (
     <ModalRoot activeModal={activeModal}>
-      <ModalPage id={MODALS.createItem} onClose={close}>
+      <ModalPage id={MODALS.createMeet} onClose={close}>
         <CreateItemModal />
       </ModalPage>
     </ModalRoot>

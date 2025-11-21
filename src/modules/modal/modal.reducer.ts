@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 export const MODALS = {
-  createItem: 'createItem',
+  createMeet: 'createMeet',
 } as const;
 
 export type ModalId = keyof typeof MODALS;
