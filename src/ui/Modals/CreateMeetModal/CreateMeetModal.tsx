@@ -1,4 +1,4 @@
-import { Box, Button, DateInput, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
+import { Box, Button, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
 import { memo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -9,10 +9,11 @@ import { createMeet } from '@/modules/meet/meet.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import { PriorityInput } from '@/ui/PriorityInput/PriorityInput';
-import { useFormField } from '@/utils/useFormField';
+import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
+import { useInputField } from '@/utils/useFormFields';
 
 export const CreateItemModal = memo(function CreateItemModal() {
-  const [name, onNameChange] = useFormField('');
+  const [name, onNameChange] = useInputField('');
   const [date, setDate] = useState<Date>();
 
   const [attendees, setAttendes] = useState<Contact[]>([]);
@@ -53,9 +54,7 @@ export const CreateItemModal = memo(function CreateItemModal() {
         <FormItem top="Приоритет" htmlFor="priority">
           <PriorityInput name="priority" id="priority" value={priority} onPriorityChange={setPriority} />
         </FormItem>
-        <FormItem top="Дата и время" htmlFor="date">
-          <DateInput name="date" id="date" value={date} onChange={setDate} enableTime accessible />
-        </FormItem>
+        <SmartRangeDateInput date={date} onDateChanged={setDate} />
       </FormLayoutGroup>
       <Box padding="2xl">
         <Button type="submit" size="m" onClick={onSubmitButton}>
