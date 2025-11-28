@@ -1,0 +1,4 @@
+.logoFirstLetter {
+  /* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent);
+}
