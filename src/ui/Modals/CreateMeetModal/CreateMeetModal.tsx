@@ -2,7 +2,7 @@ import { Box, Button, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte
 import { memo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { defaultPriority } from '@/modules/calendarEvent/calendarEvents.constants';
+import { defaultPeriod, defaultPriority } from '@/modules/calendarEvent/calendarEvents.constants';
 import { getContactsList } from '@/modules/contact/contact.selectors';
 import type { Contact } from '@/modules/contact/contact.type';
 import { createMeet } from '@/modules/meet/meet.reducer';
@@ -25,13 +25,12 @@ export const CreateItemModal = memo(function CreateItemModal() {
 
   const onSubmitButton = () => {
     if (!date) {
-      alert(1);
       return;
     }
 
     dispatch(
       createMeet({
-        meet: { title: name, date: date.getTime(), priority, attendees },
+        meet: { title: name, date: date.getTime(), priority, attendees, period: defaultPeriod },
       }),
     );
 

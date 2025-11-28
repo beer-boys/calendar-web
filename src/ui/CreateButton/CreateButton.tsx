@@ -26,6 +26,11 @@ export function CreateButton() {
     setOpen(false);
   };
 
+  const onCreateHabitClick = () => {
+    dispatch(openModal({ modalId: MODALS.createHabit }));
+    setOpen(false);
+  };
+
   return (
     <>
       {open && (
@@ -38,7 +43,7 @@ export function CreateButton() {
           onClose={handleClose}
         >
           <ActionSheetItem onClick={onCreateMeetClick}>Встречу</ActionSheetItem>
-          <ActionSheetItem>Привычку</ActionSheetItem>
+          <ActionSheetItem onClick={onCreateHabitClick}>Привычку</ActionSheetItem>
         </ActionSheet>
       )}
       <Button getRootRef={buttonRef} onClick={handleOpen} className={styles.createBttn} size="l" stretched>
