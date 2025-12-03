@@ -1,6 +1,6 @@
 import { View } from '@vkontakte/vkui';
 
-import { CalendarPanel } from '@/panel/CalendarPannel';
+import { CalendarPanel } from '@/panel/calendar/CalendarPannel';
 
 interface CalendarViewProps {
   id: string;

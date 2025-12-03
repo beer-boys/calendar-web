@@ -1,15 +1,15 @@
 import { SplitCol, SplitLayout } from '@vkontakte/vkui';
+import { Outlet } from 'react-router';
 
 import { Modals } from '@/ui/Modals/Modals';
-import { CalendarView } from '@/view/CalendarView';
 
-export function App() {
+export function AppLayout() {
   return (
     <>
       <Modals />
       <SplitLayout>
         <SplitCol stretchedOnMobile autoSpaced>
-          <CalendarView id="calendar-view" />
+          <Outlet />
         </SplitCol>
       </SplitLayout>
     </>
