@@ -1,9 +1,7 @@
 import { SplitCol, SplitLayout } from '@vkontakte/vkui';
 
 import { Modals } from '@/ui/Modals/Modals';
-
-import { CalendarPanel } from './panel/CalendarPanel/CalendarPanel';
-import { SidebarPanel } from './panel/SidebarPanel/SidebarPanel';
+import { CalendarView } from '@/view/CalendarView';
 
 export function App() {
   return (
@@ -11,14 +9,7 @@ export function App() {
       <Modals />
       <SplitLayout>
         <SplitCol stretchedOnMobile autoSpaced>
-          <SplitLayout>
-            <SplitCol maxWidth="fit-content">
-              <SidebarPanel />
-            </SplitCol>
-            <SplitCol>
-              <CalendarPanel />
-            </SplitCol>
-          </SplitLayout>
+          <CalendarView id="calendar-view" />
         </SplitCol>
       </SplitLayout>
     </>
