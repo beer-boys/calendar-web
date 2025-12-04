@@ -6,6 +6,8 @@ import { closeModal, MODALS } from '@/modules/modal/modal.reducer';
 import { getActitveModal } from '@/modules/modal/modal.selectors';
 import { CreateHabitModal } from '@/ui/Modals/CreateHabitModal/CreateHabitModal';
 import { CreateItemModal } from '@/ui/Modals/CreateMeetModal/CreateMeetModal';
+import { LoginModal } from '@/ui/Modals/LoginModal/LoginModal';
+import { RegistationModal } from '@/ui/Modals/RegistationModal/RegistationModal';
 
 export const Modals = memo(function Modals() {
   const activeModal = useSelector(getActitveModal);
@@ -20,6 +22,12 @@ export const Modals = memo(function Modals() {
       </ModalPage>
       <ModalPage id={MODALS.createHabit} onClose={close}>
         <CreateHabitModal />
+      </ModalPage>
+      <ModalPage id={MODALS.login} onClose={close}>
+        <LoginModal />
+      </ModalPage>
+      <ModalPage id={MODALS.registration} onClose={close}>
+        <RegistationModal />
       </ModalPage>
     </ModalRoot>
   );
