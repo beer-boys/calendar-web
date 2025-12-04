@@ -12,15 +12,16 @@ export interface AuthLayoutOutletContext {
 export function AuthLayout() {
   const dispatch = useDispatch();
   const currentUser = useSelector(getCurrentUser);
+  const isLoading = useSelector(getUserIsLoading);
 
   useEffect(() => {
-    if (currentUser) {
+    if (currentUser || isLoading) {
       return;
     }
 
     // @ts-expect-error
     dispatch(fetchCurrentUser());
-  }, [dispatch, currentUser]);
+  }, [dispatch, currentUser, isLoading]);
 
   const navigate = useNavigate();
   const error = useSelector(getUserError);
@@ -32,7 +33,6 @@ export function AuthLayout() {
     navigate('/login');
   }, [navigate, error]);
 
-  const isLoading = useSelector(getUserIsLoading);
   const context = { isLoading };
 
   return <Outlet context={context} />;

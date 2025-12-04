@@ -50,6 +50,7 @@ const userSlice = createSlice({
         };
 
         state.isLoading = false;
+        state.error = '';
       })
       .addCase(fetchCurrentUser.rejected, (state, action) => {
         state.error = action.error.message ?? 'Что-то пошло не так';

@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Flex, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
+import { Box, Button, ButtonGroup, Flex, FormLayoutGroup, Title } from '@vkontakte/vkui';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
@@ -8,12 +8,26 @@ import { registerAPICall } from '@/api/calls/register';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
 import { setCurrentUser } from '@/modules/user/user.reducer';
 import type { User } from '@/modules/user/user.types';
+import { Credentials } from '@/ui/Modals/RegistationModal/Credentials';
+import { UserInfo } from '@/ui/Modals/RegistationModal/UserInfo';
 import { useInputField } from '@/utils/useFormFields';
 
 export function RegistationModal() {
+  const [activeSection, setActiveSection] = useState<'credentials' | 'userInfo'>('credentials');
+
+  const isCredentials = activeSection === 'credentials';
+  const isUserInfo = activeSection === 'userInfo';
+
+  const goToUserInfo = () => setActiveSection('userInfo');
+  const goToCredentials = () => setActiveSection('credentials');
+
   const [email, onEmailChange] = useInputField('');
   const [password, onPasswordChange] = useInputField('');
   const [passwordRepeat, onPasswordRepeatChange] = useInputField('');
+
+  const [firstName, onFirstNameChange] = useInputField('');
+  const [lastName, onLastNameChange] = useInputField('');
+  const [middleName, onMiddleNameChange] = useInputField('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -26,9 +40,9 @@ export function RegistationModal() {
       const { data } = await registerAPICall({
         login: email,
         password,
-        firstName: 'firstName',
-        lastName: 'lastName',
-        middleName: 'middleName',
+        firstName,
+        lastName,
+        middleName,
       });
 
       processTokens(data);
@@ -61,24 +75,35 @@ export function RegistationModal() {
         <Title level="2">Создать аккаунт</Title>
       </Box>
       <FormLayoutGroup>
-        <FormItem top="Email" htmlFor="email">
-          <Input id="email" name="email" type="email" value={email} onChange={onEmailChange} />
-        </FormItem>
-        <FormItem top="Пароль" htmlFor="password">
-          <Input id="password" name="password" type="password" value={password} onChange={onPasswordChange} />
-        </FormItem>
-        <FormItem top="Повторите пароль" htmlFor="password">
-          <Input id="passwordRepeat" name="passwordRepeat" type="password" value={passwordRepeat} onChange={onPasswordRepeatChange} />
-        </FormItem>
+        {isCredentials && (
+          <Credentials
+            email={email}
+            onEmailChange={onEmailChange}
+            password={password}
+            onPasswordChange={onPasswordChange}
+            passwordRepeat={passwordRepeat}
+            onPasswordRepeatChange={onPasswordRepeatChange}
+          />
+        )}
+        {isUserInfo && (
+          <UserInfo
+            firstName={firstName}
+            onFirstNameChange={onFirstNameChange}
+            lastName={lastName}
+            onLastNameChange={onLastNameChange}
+            middleName={middleName}
+            onMiddleNameChange={onMiddleNameChange}
+          />
+        )}
       </FormLayoutGroup>
       <Box padding="2xl">
         <ButtonGroup stretched gap="s" mode="vertical">
-          <Button mode="primary" size="l" stretched onClick={onSubmit} loading={isLoading}>
-            Зарегистироваться
+          <Button mode="primary" size="l" stretched onClick={isUserInfo ? onSubmit : goToUserInfo} loading={isLoading}>
+            {isUserInfo ? 'Зарегистрироваться' : 'Далее'}
           </Button>
           {/* Вкорячить потом сюда аборт */}
-          <Button mode="outline" size="l" stretched onClick={onLogin} disabled={isLoading}>
-            Уже есть аккаунт?
+          <Button mode="outline" size="l" stretched onClick={isUserInfo ? goToCredentials : onLogin} disabled={isLoading}>
+            {isUserInfo ? 'Назад' : 'Уже есть аккаунт?'}
           </Button>
         </ButtonGroup>
       </Box>
