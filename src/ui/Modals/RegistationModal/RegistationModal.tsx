@@ -46,6 +46,7 @@ export function RegistationModal() {
       navigate('/');
     } catch (e) {
       console.log(e);
+    } finally {
       setIsLoading(false);
     }
   };

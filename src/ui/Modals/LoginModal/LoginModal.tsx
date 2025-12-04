@@ -1,7 +1,11 @@
 import { Box, Button, ButtonGroup, Flex, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 
-import { MODALS, openModal } from '@/modules/modal/modal.reducer';
+import { processTokens } from '@/api/api';
+import { loginAPICall } from '@/api/calls/login';
+import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
 import { useInputField } from '@/utils/useFormFields';
 
 export function LoginModal() {
@@ -9,8 +13,24 @@ export function LoginModal() {
   const [password, onPasswordChange] = useInputField('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = () => {};
+  const onSubmit = async () => {
+    setIsLoading(true);
+
+    try {
+      const { data } = await loginAPICall({ login: email, password });
+      processTokens(data);
+
+      dispatch(closeModal());
+      navigate('/');
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const onRegistation = () => {
     dispatch(openModal({ modalId: MODALS.registration }));
@@ -31,10 +51,10 @@ export function LoginModal() {
       </FormLayoutGroup>
       <Box padding="2xl">
         <ButtonGroup stretched gap="s" mode="vertical">
-          <Button mode="primary" size="l" stretched onClick={onSubmit}>
+          <Button mode="primary" size="l" stretched onClick={onSubmit} loading={isLoading}>
             Войти
           </Button>
-          <Button mode="outline" size="l" stretched onClick={onRegistation}>
+          <Button mode="outline" size="l" stretched onClick={onRegistation} disabled={isLoading}>
             Зарегистрироваться
           </Button>
         </ButtonGroup>
