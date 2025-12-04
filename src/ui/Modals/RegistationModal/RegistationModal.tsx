@@ -1,7 +1,12 @@
 import { Box, Button, ButtonGroup, Flex, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 
-import { MODALS, openModal } from '@/modules/modal/modal.reducer';
+import { registerAPICall } from '@/api/register';
+import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
+import { setCurrentUser } from '@/modules/user/user.reducer';
+import type { User } from '@/modules/user/user.types';
 import { useInputField } from '@/utils/useFormFields';
 
 export function RegistationModal() {
@@ -10,8 +15,37 @@ export function RegistationModal() {
   const [passwordRepeat, onPasswordRepeatChange] = useInputField('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = () => {};
+  const onSubmit = async () => {
+    setIsLoading(true);
+
+    try {
+      const { data } = await registerAPICall({
+        login: email,
+        password,
+        firstName: 'firstName',
+        lastName: 'lastName',
+        middleName: 'middleName',
+      });
+
+      const user: User = {
+        email: data.login,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        middleName: data.middleName,
+        roles: data.roles,
+      };
+
+      dispatch(setCurrentUser({ user }));
+      dispatch(closeModal());
+      navigate('/');
+    } catch (e) {
+      console.log(e);
+      setIsLoading(false);
+    }
+  };
 
   const onLogin = () => {
     dispatch(openModal({ modalId: MODALS.login }));
@@ -35,10 +69,11 @@ export function RegistationModal() {
       </FormLayoutGroup>
       <Box padding="2xl">
         <ButtonGroup stretched gap="s" mode="vertical">
-          <Button mode="primary" size="l" stretched onClick={onSubmit}>
+          <Button mode="primary" size="l" stretched onClick={onSubmit} loading={isLoading}>
             Зарегистироваться
           </Button>
-          <Button mode="outline" size="l" stretched onClick={onLogin}>
+          {/* Вкорячить потом сюда аборт */}
+          <Button mode="outline" size="l" stretched onClick={onLogin} disabled={isLoading}>
             Уже есть аккаунт?
           </Button>
         </ButtonGroup>
