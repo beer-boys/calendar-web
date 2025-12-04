@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 
-import { registerAPICall } from '@/api/register';
+import { processTokens } from '@/api/api';
+import { registerAPICall } from '@/api/calls/register';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
 import { setCurrentUser } from '@/modules/user/user.reducer';
 import type { User } from '@/modules/user/user.types';
@@ -29,6 +30,8 @@ export function RegistationModal() {
         lastName: 'lastName',
         middleName: 'middleName',
       });
+
+      processTokens(data);
 
       const user: User = {
         email: data.login,

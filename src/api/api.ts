@@ -74,4 +74,10 @@ export const createAPICall = <Req = unknown, Res = unknown>(method: Method, url:
     });
 };
 
+export const processTokens = (authResponse: AuthResponse) => {
+  const { accessToken, refreshToken } = authResponse;
+  localStorage.setItem(ACCESS_TOKEN_KEY, accessToken);
+  localStorage.setItem(REFRESH_TOKEN_KEY, refreshToken);
+};
+
 export default api;
