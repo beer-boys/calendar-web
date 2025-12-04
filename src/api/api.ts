@@ -67,7 +67,7 @@ api.interceptors.response.use(
 
 export const createAPICall = <Req = unknown, Res = unknown>(method: Method, url: string) => {
   return (data: Req) =>
-    axios.request<Res>({
+    api.request<Res>({
       method,
       url,
       data,
