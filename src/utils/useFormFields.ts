@@ -1,10 +1,12 @@
 import { type ChangeEvent, useCallback, useState } from 'react';
 
+export type OnFieldChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+
 export const useInputField = (initialValue: string) => {
   const [field, setField] = useState(initialValue);
 
-  const onFieldChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const onFieldChange = useCallback<OnFieldChange>(
+    (e) => {
       setField(e.currentTarget.value);
     },
     [setField],

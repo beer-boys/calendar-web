@@ -3,6 +3,8 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 export const MODALS = {
   createMeet: 'createMeet',
   createHabit: 'createHabit',
+  login: 'login',
+  registration: 'registration',
 } as const;
 
 export type ModalId = keyof typeof MODALS;

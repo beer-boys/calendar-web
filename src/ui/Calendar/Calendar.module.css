@@ -1,6 +1,7 @@
-.rootFlex {
-  display: flex;
-  flex-direction: column;
+.calendarWrapper {
+  height: 100%;
+
+  box-sizing: border-box;
 }
 
 /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
