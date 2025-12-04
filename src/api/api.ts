@@ -66,7 +66,7 @@ api.interceptors.response.use(
 );
 
 export const createAPICall = <Req = unknown, Res = unknown>(method: Method, url: string) => {
-  return (data: Req) =>
+  return (data?: Req) =>
     api.request<Res>({
       method,
       url,

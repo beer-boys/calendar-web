@@ -1,5 +1,7 @@
-import { Flex, Panel } from '@vkontakte/vkui';
+import { Flex, Panel, PanelSpinner } from '@vkontakte/vkui';
+import { useOutletContext } from 'react-router';
 
+import type { AuthLayoutOutletContext } from '@/app/AuthLayout';
 import { Calendar } from '@/ui/Calendar/Calendar';
 import { Sidebar } from '@/ui/Sidebar/Sidebar';
 
@@ -10,12 +12,18 @@ interface CalendarPanelProps {
 }
 
 export function CalendarPanel({ id }: CalendarPanelProps) {
+  const { isLoading } = useOutletContext<AuthLayoutOutletContext>();
+
   return (
     <Panel id={id}>
-      <Flex className={styles.wrapper} direction="row" gap="2xl">
-        <Sidebar />
-        <Calendar className={styles.calendar} />
-      </Flex>
+      {isLoading ? (
+        <PanelSpinner />
+      ) : (
+        <Flex className={styles.wrapper} direction="row" gap="2xl">
+          <Sidebar />
+          <Calendar className={styles.calendar} />
+        </Flex>
+      )}
     </Panel>
   );
 }

@@ -1,7 +1,10 @@
 import { Button, ButtonGroup, Flex, Panel } from '@vkontakte/vkui';
-import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 import { MODALS, openModal } from '@/modules/modal/modal.reducer';
+import { getCurrentUser } from '@/modules/user/user.selectors';
 import { Logo } from '@/ui/Logo/Logo';
 
 import styles from './LoginPanel.module.css';
@@ -12,6 +15,16 @@ interface LoginPanelProps {
 
 export function LoginPanel({ id }: LoginPanelProps) {
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+  const currentUser = useSelector(getCurrentUser);
+  useEffect(() => {
+    if (!currentUser) {
+      return;
+    }
+
+    navigate('/');
+  }, [navigate, currentUser]);
 
   const onLoginClick = () => {
     dispatch(openModal({ modalId: MODALS.login }));
