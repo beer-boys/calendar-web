@@ -20,7 +20,7 @@ export function SmartRangeDateInput({ date, onDateChanged }: SmartRangeDateInput
           </Flex>
         </Accordion.Summary>
         <Accordion.Content>
-          <FormLayoutGroup mode="horizontal" segmented>
+          <FormLayoutGroup mode="vertical">
             <FormItem top="Начало" htmlFor="date-range-start">
               <DateInput name="date-range-start" id="date-range-start" enableTime accessible />
             </FormItem>
