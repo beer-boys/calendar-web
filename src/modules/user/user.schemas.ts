@@ -29,3 +29,8 @@ export const UserInfoSchema = z.object({
   lastName: z.string().nonempty('Укажите фамилию'),
   middleName: z.string().nonempty('Укажите отчество'),
 });
+
+export const LoginSchema = z.object({
+  login: z.string().nonempty('Укажите логин'),
+  password: z.string().nonempty('Укажите пароль'),
+});
