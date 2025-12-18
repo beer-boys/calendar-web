@@ -10,7 +10,7 @@ import { closeModal } from '@/modules/modal/modal.reducer';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import { PriorityInput } from '@/ui/PriorityInput/PriorityInput';
 import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
-import { useInputField } from '@/utils/useFormFields';
+import { useInputField } from '@/utils/formField';
 
 export const CreateItemModal = memo(function CreateItemModal() {
   const [name, onNameChange] = useInputField('');

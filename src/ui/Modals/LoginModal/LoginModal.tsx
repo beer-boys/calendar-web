@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import { processTokens } from '@/api/api';
 import { loginAPICall } from '@/api/calls/login';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
-import { useInputField } from '@/utils/useFormFields';
+import { useInputField } from '@/utils/formField';
 
 export function LoginModal() {
   const [email, onEmailChange] = useInputField('');

@@ -7,7 +7,7 @@ import { createHabit } from '@/modules/habit/habit.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { PeriodInput } from '@/ui/PeriodInput/PeriodInput';
 import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
-import { useInputField } from '@/utils/useFormFields';
+import { useInputField } from '@/utils/formField';
 
 export const CreateHabitModal = memo(function CreateHabitModal() {
   const [name, onNameChange] = useInputField('');

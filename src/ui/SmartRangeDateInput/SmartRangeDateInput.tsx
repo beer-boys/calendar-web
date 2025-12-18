@@ -1,6 +1,6 @@
 import { Accordion, Button, DateInput, Flex, FormItem, FormLayoutGroup, Switch, Text } from '@vkontakte/vkui';
 
-import { useCheckField } from '@/utils/useFormFields';
+import { useCheckField } from '@/utils/formField';
 
 interface SmartRangeDateInputProps {
   date?: Date;
