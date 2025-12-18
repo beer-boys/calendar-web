@@ -1,7 +1,8 @@
 import ruLocale from '@fullcalendar/core/locales/ru';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
-import { Box } from '@vkontakte/vkui';
+import { Box, Card } from '@vkontakte/vkui';
+import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -9,7 +10,11 @@ import { getCalendarEvents } from '@/modules/calendarEvent/calendarEvent.selecto
 
 import styles from './Calendar.module.css';
 
-export function Calendar() {
+interface CalendarProps {
+  className?: string;
+}
+
+export function Calendar({ className }: CalendarProps) {
   const calendarRef = useRef<FullCalendar>(null);
   useEffect(() => {
     // После первого рендера оно тормозит и не расширяет ряды календаря, поэтому вручную триггерим обновление размеров
@@ -19,16 +24,17 @@ export function Calendar() {
   const events = useSelector(getCalendarEvents);
 
   return (
-    // Я пытался не нарушать семантику VKUI, но пришлось сделать Box flex-контейнером
-    <Box className={styles.rootFlex} flexGrow={1} padding="3xl">
-      <FullCalendar
-        ref={calendarRef}
-        locale={ruLocale}
-        plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
-        events={events}
-        height="100%"
-      />
-    </Box>
+    <Card className={clsx(className)} mode="plain">
+      <Box className={styles.calendarWrapper} flexGrow={1} padding="3xl">
+        <FullCalendar
+          ref={calendarRef}
+          locale={ruLocale}
+          plugins={[dayGridPlugin]}
+          initialView="dayGridMonth"
+          events={events}
+          height="100%"
+        />
+      </Box>
+    </Card>
   );
 }

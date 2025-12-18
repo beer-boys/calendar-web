@@ -1,15 +1,15 @@
-import { Box, Flex, Panel } from '@vkontakte/vkui';
+import { Box, Card, Flex } from '@vkontakte/vkui';
 
 import { CalendarPreview } from '@/ui/CalendarPreview/CalendarPreview';
 import { CreateButton } from '@/ui/CreateButton/CreateButton';
 import { Filters } from '@/ui/Filters/Filters';
 import { Logo } from '@/ui/Logo/Logo';
 
-import styles from './SidebarPanel.module.css';
+import styles from './Sidebar.module.css';
 
-export function SidebarPanel() {
+export function Sidebar() {
   return (
-    <Panel className={styles.root} id="sidebar-panel" mode="plain">
+    <Card className={styles.root} mode="plain">
       <Box padding="3xl">
         <Flex direction="column" gap="4xl">
           <Logo />
@@ -18,6 +18,6 @@ export function SidebarPanel() {
           <Filters />
         </Flex>
       </Box>
-    </Panel>
+    </Card>
   );
 }
