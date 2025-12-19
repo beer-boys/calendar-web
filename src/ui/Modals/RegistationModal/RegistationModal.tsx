@@ -1,5 +1,4 @@
-import { Box, Button, ButtonGroup, Flex, FormLayoutGroup, Title } from '@vkontakte/vkui';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 
@@ -8,26 +7,19 @@ import { registerAPICall } from '@/api/calls/register';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
 import { setCurrentUser } from '@/modules/user/user.reducer';
 import type { User } from '@/modules/user/user.types';
-import { Credentials } from '@/ui/Modals/RegistationModal/Credentials';
-import { UserInfo } from '@/ui/Modals/RegistationModal/UserInfo';
-import { useInputField } from '@/utils/useFormFields';
+import { Credentials } from '@/ui/Modals/RegistationModal/Credentials/Credentials';
+import type { RegistrationData } from '@/ui/Modals/RegistationModal/RegistationModal.types';
+import { emptyRegistrationData } from '@/ui/Modals/RegistationModal/RegistrationModal.constants';
+import { UserInfo } from '@/ui/Modals/RegistationModal/UserInfo/UserInfo';
 
 export function RegistationModal() {
   const [activeSection, setActiveSection] = useState<'credentials' | 'userInfo'>('credentials');
-
   const isCredentials = activeSection === 'credentials';
   const isUserInfo = activeSection === 'userInfo';
-
   const goToUserInfo = () => setActiveSection('userInfo');
   const goToCredentials = () => setActiveSection('credentials');
 
-  const [email, onEmailChange] = useInputField('');
-  const [password, onPasswordChange] = useInputField('');
-  const [passwordRepeat, onPasswordRepeatChange] = useInputField('');
-
-  const [firstName, onFirstNameChange] = useInputField('');
-  const [lastName, onLastNameChange] = useInputField('');
-  const [middleName, onMiddleNameChange] = useInputField('');
+  const registrationData = useRef<RegistrationData>(emptyRegistrationData);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,13 +29,7 @@ export function RegistationModal() {
     setIsLoading(true);
 
     try {
-      const { data } = await registerAPICall({
-        login: email,
-        password,
-        firstName,
-        lastName,
-        middleName,
-      });
+      const { data } = await registerAPICall(registrationData.current);
 
       processTokens(data);
 
@@ -70,43 +56,9 @@ export function RegistationModal() {
   };
 
   return (
-    <Flex direction="column">
-      <Box padding="2xl">
-        <Title level="2">Создать аккаунт</Title>
-      </Box>
-      <FormLayoutGroup>
-        {isCredentials && (
-          <Credentials
-            email={email}
-            onEmailChange={onEmailChange}
-            password={password}
-            onPasswordChange={onPasswordChange}
-            passwordRepeat={passwordRepeat}
-            onPasswordRepeatChange={onPasswordRepeatChange}
-          />
-        )}
-        {isUserInfo && (
-          <UserInfo
-            firstName={firstName}
-            onFirstNameChange={onFirstNameChange}
-            lastName={lastName}
-            onLastNameChange={onLastNameChange}
-            middleName={middleName}
-            onMiddleNameChange={onMiddleNameChange}
-          />
-        )}
-      </FormLayoutGroup>
-      <Box padding="2xl">
-        <ButtonGroup stretched gap="s" mode="vertical">
-          <Button mode="primary" size="l" stretched onClick={isUserInfo ? onSubmit : goToUserInfo} loading={isLoading}>
-            {isUserInfo ? 'Зарегистрироваться' : 'Далее'}
-          </Button>
-          {/* Вкорячить потом сюда аборт */}
-          <Button mode="outline" size="l" stretched onClick={isUserInfo ? goToCredentials : onLogin} disabled={isLoading}>
-            {isUserInfo ? 'Назад' : 'Уже есть аккаунт?'}
-          </Button>
-        </ButtonGroup>
-      </Box>
-    </Flex>
+    <>
+      {isCredentials && <Credentials registrationData={registrationData} onSubmit={goToUserInfo} onCancel={onLogin} />}
+      {isUserInfo && <UserInfo registrationData={registrationData} isLoading={isLoading} onSubmit={onSubmit} onCancel={goToCredentials} />}
+    </>
   );
 }

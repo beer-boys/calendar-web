@@ -1,10 +1,8 @@
-export type EventPriority = 'critical' | 'standart' | 'minor';
+import * as z from 'zod';
 
-export type EventPeriod = 'once' | 'week' | 'month';
+import type { CalendarEventSchema, EventPeriodSchema, EventPrioritySchema } from '@/modules/calendarEvent/calendarEvent.schemas';
 
-export interface CalendarEvent {
-  title: string;
-  date: number;
-  priority: EventPriority;
-  period: EventPeriod;
-}
+export type EventPriority = z.infer<typeof EventPrioritySchema>;
+export type EventPeriod = z.infer<typeof EventPeriodSchema>;
+
+export type CalendarEvent = z.infer<typeof CalendarEventSchema>;

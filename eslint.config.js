@@ -27,6 +27,7 @@ export default tseslint.config(
       '@typescript-eslint/ban-ts-comment': 'warn',
       'react-hooks/rules-of-hooks': 'warn',
       'simple-import-sort/imports': 'error',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
 );

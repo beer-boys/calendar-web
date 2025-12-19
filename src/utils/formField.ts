@@ -27,3 +27,13 @@ export const useCheckField = (initialValue: boolean) => {
 
   return [field, onFieldChange, setField] as const;
 };
+
+export const getFieldStatus = (isSubmitted: boolean, error?: string): 'default' | 'error' | 'valid' => {
+  if (error) {
+    return 'error';
+  } else if (isSubmitted) {
+    return 'valid';
+  } else {
+    return 'default';
+  }
+};

@@ -19,7 +19,7 @@ export function AuthLayout() {
       return;
     }
 
-    // @ts-expect-error
+    // @ts-expect-error Редакс сам не хочет дружить со своими типами
     dispatch(fetchCurrentUser());
   }, [dispatch, currentUser, isLoading]);
 

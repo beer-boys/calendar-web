@@ -1,6 +1,5 @@
-import type { CalendarEvent } from '@/modules/calendarEvent/calendarEvent.types';
-import type { Contact } from '@/modules/contact/contact.type';
+import * as z from 'zod';
 
-export interface Meet extends CalendarEvent {
-  attendees: Contact[];
-}
+import type { MeetSchema } from '@/modules/meet/meet.schemas';
+
+export type Meet = z.infer<typeof MeetSchema>;
