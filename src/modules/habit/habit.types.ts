@@ -1,3 +1,5 @@
-import type { CalendarEvent } from '@/modules/calendarEvent/calendarEvent.types';
+import * as z from 'zod';
 
-export type Habit = CalendarEvent;
+import type { HabitSchema } from '@/modules/habit/habit.schemas';
+
+export type Habit = z.infer<typeof HabitSchema>;
