@@ -3,8 +3,8 @@ import { Box, Button, ButtonGroup, Flex, FormItem, FormLayoutGroup, Input, Title
 import { type RefObject, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { UserInfoSchema } from '@/modules/user/user.schemas';
-import type { RegistrationData } from '@/modules/user/user.types';
+import type { RegistrationData } from '@/ui/Modals/RegistationModal/RegistationModal.types';
+import { UserInfoSchema } from '@/ui/Modals/RegistationModal/UserInfo/UserInfo.schema';
 import { getFieldStatus } from '@/utils/formField';
 
 interface UserInfoProps {

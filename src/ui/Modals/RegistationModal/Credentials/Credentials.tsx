@@ -3,8 +3,8 @@ import { Box, Button, ButtonGroup, Flex, FormItem, FormLayoutGroup, Input, Title
 import { type RefObject, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { CredentionalsSchema } from '@/modules/user/user.schemas';
-import type { RegistrationData } from '@/modules/user/user.types';
+import { CredentionalsSchema } from '@/ui/Modals/RegistationModal/Credentials/Credentials.schema';
+import type { RegistrationData } from '@/ui/Modals/RegistationModal/RegistationModal.types';
 import { getFieldStatus } from '@/utils/formField';
 
 interface CredentialsProps {

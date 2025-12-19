@@ -5,11 +5,12 @@ import { useNavigate } from 'react-router';
 import { processTokens } from '@/api/api';
 import { registerAPICall } from '@/api/calls/register';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
-import { emptyRegistrationData } from '@/modules/user/user.constants';
 import { setCurrentUser } from '@/modules/user/user.reducer';
-import { type RegistrationData, type User } from '@/modules/user/user.types';
-import { Credentials } from '@/ui/Modals/RegistationModal/Credentials';
-import { UserInfo } from '@/ui/Modals/RegistationModal/UserInfo';
+import type { User } from '@/modules/user/user.types';
+import { Credentials } from '@/ui/Modals/RegistationModal/Credentials/Credentials';
+import type { RegistrationData } from '@/ui/Modals/RegistationModal/RegistationModal.types';
+import { emptyRegistrationData } from '@/ui/Modals/RegistationModal/RegistrationModal.constants';
+import { UserInfo } from '@/ui/Modals/RegistationModal/UserInfo/UserInfo';
 
 export function RegistationModal() {
   const [activeSection, setActiveSection] = useState<'credentials' | 'userInfo'>('credentials');

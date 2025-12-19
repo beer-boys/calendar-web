@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 import { processTokens } from '@/api/api';
 import { loginAPICall } from '@/api/calls/login';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
-import { LoginSchema } from '@/modules/user/user.schemas';
+import { LoginSchema } from '@/ui/Modals/LoginModal/LoginModal.schema';
 import { getFieldStatus } from '@/utils/formField';
 
 export function LoginModal() {
