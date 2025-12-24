@@ -1,6 +1,9 @@
 import axios, { type Method } from 'axios';
 
-const API_URL = 'http://158.160.200.65:8080/api/v1';
+/** Временный костыль – починить как переедем на один домен */
+export const AUTH_URL = 'http://calendar.dws-dev.ru:8080';
+
+const API_URL = 'http://calendar.dws-dev.ru:8080/api/v1';
 const EXPIRED_TOKEN_STATUS_CODE = 403;
 const REFRESH_URL = '/auth/refresh';
 const ACCESS_TOKEN_KEY = 'accessToken';
