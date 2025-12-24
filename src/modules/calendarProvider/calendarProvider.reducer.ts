@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { AUTH_URL } from '@/api/api';
 import { linkGoogleAPICall } from '@/api/calls/linkGoogle';
 import type { CalendarProvider, CalendarProviderName } from '@/modules/calendarProvider/calendarProvider.types';
 
@@ -16,7 +15,7 @@ export const linkGoogle = createAsyncThunk('calendarProvider/linkGoogle', async 
     throw new TypeError('no redirectUrl');
   }
 
-  window.open(`${AUTH_URL}${data.redirectUrl}`, '_self');
+  window.open(data.redirectUrl, '_self');
 });
 
 type CalendarProviderState = Record<CalendarProviderName, CalendarProvider>;

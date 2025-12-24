@@ -1,9 +1,6 @@
 import axios, { type Method } from 'axios';
 
-/** Временный костыль – починить как переедем на один домен */
-export const AUTH_URL = 'http://calendar.dws-dev.ru:8080';
-
-const API_URL = 'http://calendar.dws-dev.ru:8080/api/v1';
+const API_URL = import.meta.env.VITE_API_URL;
 const EXPIRED_TOKEN_STATUS_CODE = 403;
 const REFRESH_URL = '/auth/refresh';
 const ACCESS_TOKEN_KEY = 'accessToken';
