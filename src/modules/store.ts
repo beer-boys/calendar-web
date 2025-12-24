@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
+import { calendarProviderReducer } from '@/modules/calendarProvider/calendarProvider.reducer';
 import { contactReducer } from '@/modules/contact/contact.module';
 import { habitReducer } from '@/modules/habit/habit.reducer';
 import { meetReducer } from '@/modules/meet/meet.reducer';
@@ -12,6 +13,7 @@ const reducer = combineReducers({
   contact: contactReducer,
   habit: habitReducer,
   user: userReducer,
+  calendarProvider: calendarProviderReducer,
 });
 
 export type RootState = ReturnType<typeof reducer>;
