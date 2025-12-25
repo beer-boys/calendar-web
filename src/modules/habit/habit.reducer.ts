@@ -1,5 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
+import { createHabitAPICall, type CreateHabitRequest } from '@/api/calls/habit';
 import type { Habit } from '@/modules/habit/habit.types';
 
 interface HabitState {
@@ -14,9 +15,9 @@ const habitSlice = createSlice({
   name: 'habit',
   initialState,
   reducers: {
-    createHabit: (state, action: PayloadAction<{ habit: Habit }>) => {
+    createHabit: (_, action: PayloadAction<{ habit: CreateHabitRequest }>) => {
       const { habit } = action.payload;
-      state.habits.push(habit);
+      createHabitAPICall(habit);
     },
   },
 });

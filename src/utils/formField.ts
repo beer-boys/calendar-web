@@ -1,6 +1,6 @@
 import { type ChangeEvent, useCallback, useState } from 'react';
 
-export type OnFieldChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+export type OnFieldChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
 
 export const useInputField = (initialValue: string) => {
   const [field, setField] = useState(initialValue);

@@ -1,55 +1,64 @@
-import { Box, Button, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
-import { type ChangeEvent, memo, useState } from 'react';
+import { Box, Button, FormItem, FormLayoutGroup, Input, Textarea, Title } from '@vkontakte/vkui';
+import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { defaultPeriod } from '@/modules/calendarEvent/calendarEvents.constants';
 import { createHabit } from '@/modules/habit/habit.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
-import {
-  CreateHabitDataSchema,
-  type CreateHabitErrorMessages,
-  extractCreateHabitDataErrors,
-} from '@/ui/Modals/CreateHabitModal/CreateHabitModal.schema';
 import { PeriodInput } from '@/ui/PeriodInput/PeriodInput';
 import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
 import { useInputField } from '@/utils/formField';
 
 export const CreateHabitModal = memo(function CreateHabitModal() {
-  const [errors, setErrors] = useState<CreateHabitErrorMessages>();
-  const { nameError, dateError } = errors || {};
+  const [name, onNameChange] = useInputField('');
+  const [description, onDescriptionChange] = useInputField('');
 
-  const [name, _, setName] = useInputField('');
-  const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setName(e.currentTarget.value);
-    setErrors({ dateError: errors?.dateError, nameError: undefined });
+  const [startDate, setStartDate] = useState<Date>();
+  const onStartDate = (date?: Date) => {
+    setStartDate(date);
   };
 
-  const [date, setDate] = useState<Date>();
-  const onDate = (date?: Date) => {
-    setDate(date);
-    setErrors({ nameError: errors?.nameError, dateError: undefined });
+  const [endDate, setEndDate] = useState<Date>();
+  const onEndDate = (date?: Date) => {
+    setEndDate(date);
   };
+
   const [period, setPeriod] = useState(defaultPeriod);
 
   const dispatch = useDispatch();
 
   const onSubmitButton = () => {
-    const result = CreateHabitDataSchema.safeParse({ name, date, period });
-    if (!result.success) {
-      setErrors(extractCreateHabitDataErrors(result.error));
-    } else {
-      setErrors(undefined);
-
-      const { name, date, period } = result.data;
-      dispatch(
-        createHabit({
-          habit: { title: name, date: date.getTime(), period, priority: 'minor' },
-        }),
-      );
-
-      // Убрать, когда появятся походы в сеть
-      dispatch(closeModal());
+    function pad(value: any) {
+      return String(value).padStart(2, '0');
     }
+
+    if (!startDate || !endDate) {
+      return;
+    }
+
+    // startDate
+    const year = startDate.getFullYear();
+    const month = pad(startDate.getMonth() + 1); // месяцы с 0
+    const day = pad(startDate.getDate());
+
+    const startDateFormatted = `${year}-${month}-${day}`;
+    const earliestTime = `${pad(startDate.getHours())}:${pad(startDate.getMinutes())}`;
+    const latestTime = `${pad(endDate.getHours())}:${pad(endDate.getMinutes())}`;
+
+    dispatch(
+      createHabit({
+        habit: {
+          title: name,
+          description,
+          durationMinutes: 30,
+          recurrence: { frequency: period, startDate: startDateFormatted },
+          flexibility: { earliestTime, latestTime },
+        },
+      }),
+    );
+
+    // Убрать, когда появятся походы в сеть
+    dispatch(closeModal());
   };
 
   return (
@@ -58,13 +67,16 @@ export const CreateHabitModal = memo(function CreateHabitModal() {
         <Title level="2">Создание привычки</Title>
       </Box>
       <FormLayoutGroup mode="vertical">
-        <FormItem top="Название" htmlFor="name" bottom={nameError} status={nameError ? 'error' : 'default'} required>
+        <FormItem top="Название" htmlFor="name" required>
           <Input name="name" id="name" value={name} onChange={onNameChange} />
+        </FormItem>
+        <FormItem top="Описание" htmlFor="description" required>
+          <Textarea name="description" id="description" value={description} onChange={onDescriptionChange} />
         </FormItem>
         <FormItem top="Повторять" htmlFor="period">
           <PeriodInput name="period" id="period" value={period} onPeriodChange={setPeriod} />
         </FormItem>
-        <SmartRangeDateInput date={date} error={dateError} onDateChanged={onDate} />
+        <SmartRangeDateInput onStartDateChanged={onStartDate} onEndDateChanged={onEndDate} />
       </FormLayoutGroup>
       <Box padding="2xl">
         <Button type="submit" size="m" onClick={onSubmitButton}>
