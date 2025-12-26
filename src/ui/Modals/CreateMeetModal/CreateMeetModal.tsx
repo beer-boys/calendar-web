@@ -73,7 +73,7 @@ export const CreateItemModal = memo(function CreateItemModal() {
         <FormItem top="Приоритет" htmlFor="priority">
           <PriorityInput name="priority" id="priority" value={priority} onPriorityChange={setPriority} />
         </FormItem>
-        <SmartRangeDateInput date={date} error={dateError} onEndDateChanged={onDate} />
+        <SmartRangeDateInput date={date} error={dateError} onDateChanged={onDate} />
       </FormLayoutGroup>
       <Box padding="2xl">
         <Button type="submit" size="m" onClick={onSubmitButton}>

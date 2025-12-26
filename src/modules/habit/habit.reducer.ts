@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
+import { getEventsAPICall } from '@/api/calls/events';
 import { createHabitAPICall, type CreateHabitRequest } from '@/api/calls/habit';
 import type { Habit } from '@/modules/habit/habit.types';
-import { getEventsAPICall } from '@/api/calls/events';
 
 export const getHabits = createAsyncThunk('habit/getHabits', async ({ startDate, endDate }: { startDate: string; endDate: string }) => {
   const { data } = await getEventsAPICall(startDate, endDate);

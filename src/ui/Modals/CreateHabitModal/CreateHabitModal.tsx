@@ -2,12 +2,12 @@ import { Box, Button, FormItem, FormLayoutGroup, Input, Textarea, Title } from '
 import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { createHabitAPICall } from '@/api/calls/habit';
 import { defaultPeriod } from '@/modules/calendarEvent/calendarEvents.constants';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { PeriodInput } from '@/ui/PeriodInput/PeriodInput';
-import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
+import { SmartRangeDateInput } from '@/ui/SmartRangeDateInputHabit/SmartRangeDateInputHabit';
 import { useInputField } from '@/utils/formField';
-import { createHabitAPICall } from '@/api/calls/habit';
 
 export const CreateHabitModal = memo(function CreateHabitModal() {
   const [name, onNameChange] = useInputField('');

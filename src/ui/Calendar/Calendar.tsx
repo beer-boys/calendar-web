@@ -7,9 +7,9 @@ import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getCalendarEvents } from '@/modules/calendarEvent/calendarEvent.selectors';
+import { getHabits } from '@/modules/habit/habit.reducer';
 
 import styles from './Calendar.module.css';
-import { getHabits } from '@/modules/habit/habit.reducer';
 
 interface CalendarProps {
   className?: string;
