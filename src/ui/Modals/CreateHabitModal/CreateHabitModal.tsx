@@ -3,11 +3,11 @@ import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { defaultPeriod } from '@/modules/calendarEvent/calendarEvents.constants';
-import { createHabit } from '@/modules/habit/habit.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { PeriodInput } from '@/ui/PeriodInput/PeriodInput';
 import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
 import { useInputField } from '@/utils/formField';
+import { createHabitAPICall } from '@/api/calls/habit';
 
 export const CreateHabitModal = memo(function CreateHabitModal() {
   const [name, onNameChange] = useInputField('');
@@ -45,17 +45,18 @@ export const CreateHabitModal = memo(function CreateHabitModal() {
     const earliestTime = `${pad(startDate.getHours())}:${pad(startDate.getMinutes())}`;
     const latestTime = `${pad(endDate.getHours())}:${pad(endDate.getMinutes())}`;
 
-    dispatch(
-      createHabit({
-        habit: {
-          title: name,
-          description,
-          durationMinutes: 30,
-          recurrence: { frequency: period, startDate: startDateFormatted },
-          flexibility: { earliestTime, latestTime },
-        },
-      }),
-    );
+    createHabitAPICall({
+      title: name,
+      description,
+      durationMinutes: 30,
+      recurrence: { frequency: period, startDate: startDateFormatted },
+      flexibility: { earliestTime, latestTime },
+    }).then(() => {
+      const startDate = new Date(2025, 11, 1).toISOString(); // 1 декабря 2025
+      const endDate = new Date(2025, 11, 12).toISOString(); // 31 декабря 2025
+      // @ts-expect-error
+      dispatch(getHabits({ startDate, endDate }));
+    });
 
     // Убрать, когда появятся походы в сеть
     dispatch(closeModal());
