@@ -1,6 +1,6 @@
 import axios, { type Method } from 'axios';
 
-const API_URL = 'http://158.160.200.65:8080/api/v1';
+const API_URL = import.meta.env.VITE_API_URL;
 const EXPIRED_TOKEN_STATUS_CODE = 403;
 const REFRESH_URL = '/auth/refresh';
 const ACCESS_TOKEN_KEY = 'accessToken';

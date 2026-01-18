@@ -28,6 +28,10 @@ const userSlice = createSlice({
       const { user } = action.payload;
       state.currentUser = user;
     },
+    setUserError: (state, action: PayloadAction<{ error: string }>) => {
+      const { error } = action.payload;
+      state.error = error;
+    },
     removeCurrentUser: (state) => {
       state.currentUser = null;
     },
@@ -59,5 +63,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { setCurrentUser, removeCurrentUser } = userSlice.actions;
+export const { setUserError, setCurrentUser, removeCurrentUser } = userSlice.actions;
 export const { reducer: userReducer } = userSlice;

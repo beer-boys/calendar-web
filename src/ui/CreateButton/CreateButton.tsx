@@ -46,7 +46,7 @@ export function CreateButton() {
           <ActionSheetItem onClick={onCreateHabitClick}>Привычку</ActionSheetItem>
         </ActionSheet>
       )}
-      <Button getRootRef={buttonRef} onClick={handleOpen} className={styles.createBttn} size="l" stretched>
+      <Button getRootRef={buttonRef} onClick={handleOpen} className={styles.createBttn} size="l">
         + Создать
       </Button>
     </>

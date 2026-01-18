@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { processTokens } from '@/api/api';
 import { registerAPICall } from '@/api/calls/register';
 import { closeModal, MODALS, openModal } from '@/modules/modal/modal.reducer';
-import { setCurrentUser } from '@/modules/user/user.reducer';
+import { setCurrentUser, setUserError } from '@/modules/user/user.reducer';
 import type { User } from '@/modules/user/user.types';
 import { Credentials } from '@/ui/Modals/RegistationModal/Credentials/Credentials';
 import type { RegistrationData } from '@/ui/Modals/RegistationModal/RegistationModal.types';
@@ -42,6 +42,7 @@ export function RegistationModal() {
       };
 
       dispatch(setCurrentUser({ user }));
+      dispatch(setUserError({ error: '' }));
       dispatch(closeModal());
       navigate('/');
     } catch (e) {

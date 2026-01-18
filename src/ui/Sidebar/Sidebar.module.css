@@ -1,3 +1,12 @@
 .root {
   width: fit-content;
 }
+
+.fullHeight {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.calendarSelectorWrapper {
+  flex-grow: 1;
+}
