@@ -1,7 +1,7 @@
 import { Select, type SelectProps } from '@vkontakte/vkui';
 
+import { defaultPeriod, periodNames } from '@/modules/calendarEvent/calendarEvent.constants';
 import type { EventPeriod } from '@/modules/calendarEvent/calendarEvent.types';
-import { defaultPeriod, periodNames } from '@/modules/calendarEvent/calendarEvents.constants';
 
 interface PeriodInputProps extends Omit<SelectProps, 'onChange' | 'options' | 'placeholder'> {
   onPeriodChange: (priority: EventPeriod) => void;
