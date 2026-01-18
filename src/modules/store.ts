@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { calendarEventsReducer, refetchEventsMiddleware } from '@/modules/calendarEvent/calendarEvent.reducer';
+import { calendarEventsReducer, createHabitMiddleware } from '@/modules/calendarEvent/calendarEvent.reducer';
 import { calendarProviderReducer } from '@/modules/calendarProvider/calendarProvider.reducer';
 import { contactReducer } from '@/modules/contact/contact.module';
 import { modalReducer } from '@/modules/modal/modal.reducer';
@@ -18,5 +18,5 @@ export type RootState = ReturnType<typeof reducer>;
 
 export const store = configureStore({
   reducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(refetchEventsMiddleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(createHabitMiddleware),
 });

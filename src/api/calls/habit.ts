@@ -4,16 +4,16 @@ import { createAPICall } from '@/api/api';
 
 type EventPeriod = 'daily' | 'weekly';
 
-interface CreateHabitRequest {
-  title: string;
-  description: string;
-  durationMinutes: number;
-  recurrence: { frequency: EventPeriod; startDate: string };
-  flexibility: { earliestTime: string; latestTime: string };
-}
-
 // Перечисление дней недели (можно расширить, если есть другие значения)
 type DayOfWeek = 'MONDAY' | 'TUESDAY' | 'WEDNESDAY' | 'THURSDAY' | 'FRIDAY' | 'SATURDAY' | 'SUNDAY';
+
+interface CreateHabitRequest {
+  title: string;
+  description?: string;
+  durationMinutes: number;
+  recurrence: { frequency: EventPeriod; daysOfWeek: DayOfWeek[]; startDate: string };
+  flexibility: { earliestTime: string; latestTime: string };
+}
 
 interface Recurrence {
   frequency: string;
