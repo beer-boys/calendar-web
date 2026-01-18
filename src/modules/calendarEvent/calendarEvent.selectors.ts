@@ -1,8 +1,11 @@
-import { createSelector } from '@reduxjs/toolkit';
+import type { RootState } from '@/modules/store';
 
-import { getHabits } from '@/modules/habit/habit.selectors';
-import { getMeets } from '@/modules/meet/meet.selectors';
+const getCalendarEventsState = (state: RootState) => state.calendarEvents;
 
-export const getCalendarEvents = createSelector(getMeets, getHabits, (meets, habits) => {
-  return [...meets, ...habits];
-});
+export const getCalendarEvents = (state: RootState) => getCalendarEventsState(state).events;
+
+export const getCurrentDates = (state: RootState) => getCalendarEventsState(state).currentDates;
+
+export const getLoadingState = (state: RootState) => getCalendarEventsState(state).isLoading;
+
+export const getError = (state: RootState) => getCalendarEventsState(state).error;

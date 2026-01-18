@@ -1,4 +1,4 @@
-import axios, { type Method } from 'axios';
+import axios, { type AxiosRequestConfig, type Method } from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL;
 const EXPIRED_TOKEN_STATUS_CODE = 403;
@@ -65,13 +65,21 @@ api.interceptors.response.use(
   },
 );
 
-export const createAPICall = <Req = unknown, Res = unknown>(method: Method, url: string) => {
-  return (data?: Req) =>
-    api.request<Res>({
+export const createAPICall = <Res = unknown, Req = unknown>(method: Method, url: string) => {
+  return (params?: Req) => {
+    const config: AxiosRequestConfig = {
       method,
       url,
-      data,
-    });
+    };
+
+    if (method.toUpperCase() == 'GET') {
+      config.params = params;
+    } else {
+      config.data = params;
+    }
+
+    return api.request<Res>(config);
+  };
 };
 
 export const processTokens = (authResponse: AuthResponse) => {

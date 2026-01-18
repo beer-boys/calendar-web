@@ -1,7 +1,7 @@
 import { Select, type SelectProps } from '@vkontakte/vkui';
 
+import { defaultPriority, priorityNames } from '@/modules/calendarEvent/calendarEvent.constants';
 import type { EventPriority } from '@/modules/calendarEvent/calendarEvent.types';
-import { defaultPriority, priorityNames } from '@/modules/calendarEvent/calendarEvents.constants';
 
 interface PriorityInputProps extends Omit<SelectProps, 'onChange' | 'options' | 'placeholder'> {
   onPriorityChange: (priority: EventPriority) => void;

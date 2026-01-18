@@ -1,10 +1,9 @@
 import type { EventPeriod, EventPriority } from '@/modules/calendarEvent/calendarEvent.types';
 
-export const defaultPeriod: EventPeriod = 'once';
+export const defaultPeriod: EventPeriod = 'daily';
 export const periodNames: Record<EventPeriod, string> = {
-  once: 'Никогда',
-  week: 'Еженедельно',
-  month: 'Ежемесячно',
+  daily: 'Ежедневно',
+  weekly: 'Еженедельно',
 };
 
 export const defaultPriority: EventPriority = 'standart';

@@ -1,12 +1,14 @@
+import type { DatesSetArg } from '@fullcalendar/core/index.js';
 import ruLocale from '@fullcalendar/core/locales/ru';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
 import { Box, Card } from '@vkontakte/vkui';
 import clsx from 'clsx';
 import { useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { getCalendarEvents } from '@/modules/calendarEvent/calendarEvent.selectors';
+import { getEvents, setCurrentDates } from '@/modules/calendarEvent/calendarEvent.reducer';
+import { getCalendarEvents, getCurrentDates } from '@/modules/calendarEvent/calendarEvent.selectors';
 
 import styles from './Calendar.module.css';
 
@@ -16,12 +18,35 @@ interface CalendarProps {
 
 export function Calendar({ className }: CalendarProps) {
   const calendarRef = useRef<FullCalendar>(null);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    // После первого рендера оно тормозит и не расширяет ряды календаря, поэтому вручную триггерим обновление размеров
-    calendarRef.current?.getApi().updateSize();
+    if (!calendarRef.current) {
+      return;
+    }
+
+    const calendarApi = calendarRef.current.getApi();
+    calendarApi.updateSize();
   }, []);
 
+  const { start, end } = useSelector(getCurrentDates);
+  useEffect(() => {
+    if (start && end) {
+      // @ts-expect-error
+      dispatch(getEvents({ start, end }));
+    }
+  }, [start, end]);
+
   const events = useSelector(getCalendarEvents);
+
+  const onDatesSet = ({ start, end }: DatesSetArg) => {
+    dispatch(
+      setCurrentDates({
+        currentDates: { start: start.getTime(), end: end.getTime() },
+      }),
+    );
+  };
 
   return (
     <Card className={clsx(className)} mode="plain">
@@ -33,6 +58,7 @@ export function Calendar({ className }: CalendarProps) {
           initialView="dayGridMonth"
           events={events}
           height="100%"
+          datesSet={onDatesSet}
         />
       </Box>
     </Card>

@@ -2,10 +2,9 @@ import { Box, Button, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte
 import { type ChangeEvent, memo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { defaultPeriod, defaultPriority } from '@/modules/calendarEvent/calendarEvents.constants';
+import { defaultPriority } from '@/modules/calendarEvent/calendarEvent.constants';
 import { getContactsList } from '@/modules/contact/contact.selectors';
 import type { Contact } from '@/modules/contact/contact.type';
-import { createMeet } from '@/modules/meet/meet.reducer';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import {
@@ -21,7 +20,7 @@ export const CreateItemModal = memo(function CreateItemModal() {
   const [errors, setErrors] = useState<CreateMeetErrorMessages>();
   const { nameError, dateError } = errors || {};
 
-  const [name, _, setName] = useInputField('');
+  const [name, setName] = useInputField('');
   const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.currentTarget.value);
     setErrors({ dateError: errors?.dateError, nameError: undefined });
@@ -46,12 +45,12 @@ export const CreateItemModal = memo(function CreateItemModal() {
     } else {
       setErrors(undefined);
 
-      const { name, date, attendees, priority } = result.data;
-      dispatch(
-        createMeet({
-          meet: { title: name, date: date.getTime(), priority, attendees, period: defaultPeriod },
-        }),
-      );
+      // const { name, date, attendees, priority } = result.data;
+      // dispatch(
+      //   createMeet({
+      //     meet: { title: name, date: date.getTime(), priority, attendees, period: defaultPeriod },
+      //   }),
+      // );
 
       // Убрать, когда появятся походы в сеть
       dispatch(closeModal());

@@ -22,4 +22,4 @@ interface RegisterAPICallResponse {
 }
 
 const REGISTER_URL = '/auth/register';
-export const registerAPICall = createAPICall<RegisterAPICallRequest, RegisterAPICallResponse>('POST', REGISTER_URL);
+export const registerAPICall = createAPICall<RegisterAPICallResponse, RegisterAPICallRequest>('POST', REGISTER_URL);
