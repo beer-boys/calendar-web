@@ -9,4 +9,4 @@ interface LoginAPICallRequest {
 type LoginAPICallResponse = AuthResponse;
 
 const LOGIN_URL = '/auth/login';
-export const loginAPICall = createAPICall<LoginAPICallRequest, LoginAPICallResponse>('POST', LOGIN_URL);
+export const loginAPICall = createAPICall<LoginAPICallResponse, LoginAPICallRequest>('POST', LOGIN_URL);

@@ -10,4 +10,4 @@ interface MeAPICallResponse {
 }
 
 const ME_URL = '/me';
-export const meAPICall = createAPICall<unknown, MeAPICallResponse>('GET', ME_URL);
+export const meAPICall = createAPICall<MeAPICallResponse>('GET', ME_URL);

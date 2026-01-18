@@ -6,4 +6,4 @@ interface LinkGoogleResponse {
 }
 
 const LINK_GOOGLE_URL = '/auth/link/google';
-export const linkGoogleAPICall = createAPICall<unknown, LinkGoogleResponse>('GET', LINK_GOOGLE_URL);
+export const linkGoogleAPICall = createAPICall<LinkGoogleResponse>('GET', LINK_GOOGLE_URL);
