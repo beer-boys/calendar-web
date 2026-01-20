@@ -6,7 +6,7 @@ import { contactReducer } from '@/modules/contact/contact.module';
 import { modalReducer } from '@/modules/modal/modal.reducer';
 import { userReducer } from '@/modules/user/user.reducer';
 
-const reducer = combineReducers({
+export const rootReducer = combineReducers({
   modal: modalReducer,
   contact: contactReducer,
   user: userReducer,
@@ -14,9 +14,9 @@ const reducer = combineReducers({
   calendarEvents: calendarEventsReducer,
 });
 
-export type RootState = ReturnType<typeof reducer>;
+export type RootState = ReturnType<typeof rootReducer>;
 
 export const store = configureStore({
-  reducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(createHabitMiddleware),
 });

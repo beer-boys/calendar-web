@@ -139,7 +139,7 @@ export const CreateHabitModal = memo(function CreateHabitModal() {
       </FormLayoutGroup>
       <Box padding="2xl">
         <Flex align="center" gap="2xl">
-          <Button type="submit" size="m" onClick={onSubmitButton} loading={isLoading} disabled={isLoading}>
+          <Button type="submit" size="m" onClick={onSubmitButton} loading={isLoading} disabled={isLoading} data-qa-id="create-habit-submit">
             Создать
           </Button>
           {error && <Text className={styles.errorText}>{error}</Text>}

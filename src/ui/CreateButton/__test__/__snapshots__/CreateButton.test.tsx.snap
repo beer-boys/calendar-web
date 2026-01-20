@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CreateButton should render 1`] = `
+<DocumentFragment>
+  <button
+    class="vkuiInternalTappable vkuiButton__host vkuiButton__sizeL vkuiButton__modePrimary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+    data-qa-id="event-create-bttn"
+    type="button"
+  >
+    <span
+      class="vkuiButton__in"
+    >
+      <span
+        class="vkuiButton__content"
+        data-testid="children"
+      >
+        + Создать
+      </span>
+    </span>
+  </button>
+</DocumentFragment>
+`;

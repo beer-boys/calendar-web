@@ -7,6 +7,13 @@ on:
         branches:
             - main
 jobs:
+    jest:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: npm ci
+            - run: npm test
+
     linter:
         runs-on: ubuntu-latest
         steps:
