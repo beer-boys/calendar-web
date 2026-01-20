@@ -1,0 +1,3571 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Calendar should render calendar with events 1`] = `
+<div>
+  <li
+    class="vkuiCard__host vkuiCard__modePlain vkuiRootComponent__host"
+  >
+    <div
+      class="vkui-padding-3xl vkui-flex-grow vkuiRootComponent__host"
+      style="--vkui_internal--flex-grow: 1;"
+    >
+      <div
+        class="fc fc-media-screen fc-direction-ltr fc-theme-standard fc-liquid-hack"
+        style="height: 100%;"
+      >
+        <div
+          class="fc-header-toolbar fc-toolbar "
+        >
+          <div
+            class="fc-toolbar-chunk"
+          >
+            <h2
+              class="fc-toolbar-title"
+              id="fc-dom-86"
+            >
+              январь 2026 г.
+            </h2>
+          </div>
+          <div
+            class="fc-toolbar-chunk"
+          />
+          <div
+            class="fc-toolbar-chunk"
+          >
+            <button
+              aria-pressed="false"
+              class="fc-today-button fc-button fc-button-primary"
+              disabled=""
+              title="Сегодня"
+              type="button"
+            >
+              Сегодня
+            </button>
+            <div
+              class="fc-button-group"
+            >
+              <button
+                aria-pressed="false"
+                class="fc-prev-button fc-button fc-button-primary"
+                title="Пред"
+                type="button"
+              >
+                <span
+                  class="fc-icon fc-icon-chevron-left"
+                  role="img"
+                />
+              </button>
+              <button
+                aria-pressed="false"
+                class="fc-next-button fc-button fc-button-primary"
+                title="След"
+                type="button"
+              >
+                <span
+                  class="fc-icon fc-icon-chevron-right"
+                  role="img"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="fc-dom-86"
+          class="fc-view-harness fc-view-harness-active"
+        >
+          <div
+            class="fc-dayGridMonth-view fc-view fc-daygrid"
+          >
+            <table
+              class="fc-scrollgrid  fc-scrollgrid-liquid"
+              role="grid"
+            >
+              <tbody
+                role="rowgroup"
+              >
+                <tr
+                  class="fc-scrollgrid-section fc-scrollgrid-section-header "
+                  role="presentation"
+                >
+                  <th
+                    role="presentation"
+                  >
+                    <div
+                      class="fc-scroller-harness"
+                    >
+                      <div
+                        class="fc-scroller"
+                        style="overflow-x: hidden; overflow-y: hidden;"
+                      >
+                        <table
+                          class="fc-col-header "
+                          role="presentation"
+                          style="width: 0px;"
+                        >
+                          <colgroup />
+                          <thead
+                            role="presentation"
+                          >
+                            <tr
+                              role="row"
+                            >
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-mon"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="понедельник"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    пн
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-tue"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="вторник"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    вт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-wed"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="среда"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    ср
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-thu"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="четверг"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    чт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-fri"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="пятница"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    пт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-sat"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="суббота"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    сб
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-sun"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="воскресенье"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    вс
+                                  </a>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr
+                  class="fc-scrollgrid-section fc-scrollgrid-section-body  fc-scrollgrid-section-liquid"
+                  role="presentation"
+                >
+                  <td
+                    role="presentation"
+                  >
+                    <div
+                      class="fc-scroller-harness fc-scroller-harness-liquid"
+                    >
+                      <div
+                        class="fc-scroller fc-scroller-liquid-absolute"
+                        style="overflow-x: hidden; overflow-y: auto;"
+                      >
+                        <div
+                          class="fc-daygrid-body fc-daygrid-body-unbalanced "
+                          style="width: 0px;"
+                        >
+                          <table
+                            class="fc-scrollgrid-sync-table"
+                            role="presentation"
+                            style="width: 0px; height: 0px;"
+                          >
+                            <colgroup />
+                            <tbody
+                              role="presentation"
+                            >
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-87"
+                                  class="fc-day fc-day-mon fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-29"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="29 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-87"
+                                      >
+                                        29
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-89"
+                                  class="fc-day fc-day-tue fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-30"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="30 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-89"
+                                      >
+                                        30
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-91"
+                                  class="fc-day fc-day-wed fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-31"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="31 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-91"
+                                      >
+                                        31
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-93"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-01"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="1 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-93"
+                                      >
+                                        1
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-95"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-02"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="2 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-95"
+                                      >
+                                        2
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-97"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-03"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="3 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-97"
+                                      >
+                                        3
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            10
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Ежедневный стендап
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-99"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-04"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="4 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-99"
+                                      >
+                                        4
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            11
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Проверка почты и тикетов
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-101"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-05"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="5 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-101"
+                                      >
+                                        5
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            12:30
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Еженедельное планирование
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-103"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-06"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="6 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-103"
+                                      >
+                                        6
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-105"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-07"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="7 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-105"
+                                      >
+                                        7
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-107"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-08"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="8 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-107"
+                                      >
+                                        8
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            16
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Ревью PR
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-109"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-09"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="9 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-109"
+                                      >
+                                        9
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-111"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-10"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="10 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-111"
+                                      >
+                                        10
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            9:30
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Проверка мониторинга
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-113"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-11"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="11 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-113"
+                                      >
+                                        11
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-115"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-12"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="12 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-115"
+                                      >
+                                        12
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            15
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Созвон со стейкхолдерами
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-117"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-13"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="13 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-117"
+                                      >
+                                        13
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-119"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-14"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="14 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-119"
+                                      >
+                                        14
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-121"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-15"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="15 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-121"
+                                      >
+                                        15
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            14
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Фокус-сессия
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-123"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-16"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="16 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-123"
+                                      >
+                                        16
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-125"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-17"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="17 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-125"
+                                      >
+                                        17
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-127"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-18"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="18 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-127"
+                                      >
+                                        18
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            18
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Подготовка отчёта
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-129"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-19"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="19 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-129"
+                                      >
+                                        19
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-131"
+                                  class="fc-day fc-day-tue fc-day-today fc-daygrid-day"
+                                  data-date="2026-01-20"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="20 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-131"
+                                      >
+                                        20
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-133"
+                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-21"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="21 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-133"
+                                      >
+                                        21
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-135"
+                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-22"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="22 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-135"
+                                      >
+                                        22
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-future fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            13
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Ретроспектива
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-137"
+                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-23"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="23 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-137"
+                                      >
+                                        23
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-139"
+                                  class="fc-day fc-day-sat fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-24"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="24 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-139"
+                                      >
+                                        24
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-141"
+                                  class="fc-day fc-day-sun fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-25"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="25 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-141"
+                                      >
+                                        25
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-143"
+                                  class="fc-day fc-day-mon fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-26"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="26 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-143"
+                                      >
+                                        26
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-event-harness"
+                                        style="margin-top: 0px;"
+                                      >
+                                        <a
+                                          class="fc-event fc-event-start fc-event-end fc-event-future fc-daygrid-event fc-daygrid-dot-event"
+                                        >
+                                          <div
+                                            class="fc-daygrid-event-dot"
+                                          />
+                                          <div
+                                            class="fc-event-time"
+                                          >
+                                            17:30
+                                          </div>
+                                          <div
+                                            class="fc-event-title"
+                                          >
+                                            Резерв под срочные задачи
+                                          </div>
+                                        </a>
+                                      </div>
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-145"
+                                  class="fc-day fc-day-tue fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-27"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="27 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-145"
+                                      >
+                                        27
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-147"
+                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-28"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="28 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-147"
+                                      >
+                                        28
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-149"
+                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-29"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="29 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-149"
+                                      >
+                                        29
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-151"
+                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-30"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="30 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-151"
+                                      >
+                                        30
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-153"
+                                  class="fc-day fc-day-sat fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-31"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="31 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-153"
+                                      >
+                                        31
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-155"
+                                  class="fc-day fc-day-sun fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-01"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="1 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-155"
+                                      >
+                                        1
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-157"
+                                  class="fc-day fc-day-mon fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-02"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="2 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-157"
+                                      >
+                                        2
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-159"
+                                  class="fc-day fc-day-tue fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-03"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="3 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-159"
+                                      >
+                                        3
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-161"
+                                  class="fc-day fc-day-wed fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-04"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="4 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-161"
+                                      >
+                                        4
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-163"
+                                  class="fc-day fc-day-thu fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-05"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="5 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-163"
+                                      >
+                                        5
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-165"
+                                  class="fc-day fc-day-fri fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-06"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="6 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-165"
+                                      >
+                                        6
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-167"
+                                  class="fc-day fc-day-sat fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-07"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="7 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-167"
+                                      >
+                                        7
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-169"
+                                  class="fc-day fc-day-sun fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-08"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="8 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-169"
+                                      >
+                                        8
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Calendar should render empty calendar 1`] = `
+<div>
+  <li
+    class="vkuiCard__host vkuiCard__modePlain vkuiRootComponent__host"
+  >
+    <div
+      class="vkui-padding-3xl vkui-flex-grow vkuiRootComponent__host"
+      style="--vkui_internal--flex-grow: 1;"
+    >
+      <div
+        class="fc fc-media-screen fc-direction-ltr fc-theme-standard fc-liquid-hack"
+        style="height: 100%;"
+      >
+        <div
+          class="fc-header-toolbar fc-toolbar "
+        >
+          <div
+            class="fc-toolbar-chunk"
+          >
+            <h2
+              class="fc-toolbar-title"
+              id="fc-dom-1"
+            >
+              январь 2026 г.
+            </h2>
+          </div>
+          <div
+            class="fc-toolbar-chunk"
+          />
+          <div
+            class="fc-toolbar-chunk"
+          >
+            <button
+              aria-pressed="false"
+              class="fc-today-button fc-button fc-button-primary"
+              disabled=""
+              title="Сегодня"
+              type="button"
+            >
+              Сегодня
+            </button>
+            <div
+              class="fc-button-group"
+            >
+              <button
+                aria-pressed="false"
+                class="fc-prev-button fc-button fc-button-primary"
+                title="Пред"
+                type="button"
+              >
+                <span
+                  class="fc-icon fc-icon-chevron-left"
+                  role="img"
+                />
+              </button>
+              <button
+                aria-pressed="false"
+                class="fc-next-button fc-button fc-button-primary"
+                title="След"
+                type="button"
+              >
+                <span
+                  class="fc-icon fc-icon-chevron-right"
+                  role="img"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="fc-dom-1"
+          class="fc-view-harness fc-view-harness-active"
+        >
+          <div
+            class="fc-dayGridMonth-view fc-view fc-daygrid"
+          >
+            <table
+              class="fc-scrollgrid  fc-scrollgrid-liquid"
+              role="grid"
+            >
+              <tbody
+                role="rowgroup"
+              >
+                <tr
+                  class="fc-scrollgrid-section fc-scrollgrid-section-header "
+                  role="presentation"
+                >
+                  <th
+                    role="presentation"
+                  >
+                    <div
+                      class="fc-scroller-harness"
+                    >
+                      <div
+                        class="fc-scroller"
+                        style="overflow-x: hidden; overflow-y: hidden;"
+                      >
+                        <table
+                          class="fc-col-header "
+                          role="presentation"
+                          style="width: 0px;"
+                        >
+                          <colgroup />
+                          <thead
+                            role="presentation"
+                          >
+                            <tr
+                              role="row"
+                            >
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-mon"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="понедельник"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    пн
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-tue"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="вторник"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    вт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-wed"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="среда"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    ср
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-thu"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="четверг"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    чт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-fri"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="пятница"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    пт
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-sat"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="суббота"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    сб
+                                  </a>
+                                </div>
+                              </th>
+                              <th
+                                class="fc-col-header-cell fc-day fc-day-sun"
+                                role="columnheader"
+                              >
+                                <div
+                                  class="fc-scrollgrid-sync-inner"
+                                >
+                                  <a
+                                    aria-label="воскресенье"
+                                    class="fc-col-header-cell-cushion"
+                                  >
+                                    вс
+                                  </a>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+                <tr
+                  class="fc-scrollgrid-section fc-scrollgrid-section-body  fc-scrollgrid-section-liquid"
+                  role="presentation"
+                >
+                  <td
+                    role="presentation"
+                  >
+                    <div
+                      class="fc-scroller-harness fc-scroller-harness-liquid"
+                    >
+                      <div
+                        class="fc-scroller fc-scroller-liquid-absolute"
+                        style="overflow-x: hidden; overflow-y: auto;"
+                      >
+                        <div
+                          class="fc-daygrid-body fc-daygrid-body-unbalanced "
+                          style="width: 0px;"
+                        >
+                          <table
+                            class="fc-scrollgrid-sync-table"
+                            role="presentation"
+                            style="width: 0px; height: 0px;"
+                          >
+                            <colgroup />
+                            <tbody
+                              role="presentation"
+                            >
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-2"
+                                  class="fc-day fc-day-mon fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-29"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="29 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-2"
+                                      >
+                                        29
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-4"
+                                  class="fc-day fc-day-tue fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-30"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="30 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-4"
+                                      >
+                                        30
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-6"
+                                  class="fc-day fc-day-wed fc-day-past fc-day-other fc-daygrid-day"
+                                  data-date="2025-12-31"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="31 декабря 2025 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-6"
+                                      >
+                                        31
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-8"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-01"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="1 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-8"
+                                      >
+                                        1
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-10"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-02"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="2 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-10"
+                                      >
+                                        2
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-12"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-03"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="3 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-12"
+                                      >
+                                        3
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-14"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-04"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="4 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-14"
+                                      >
+                                        4
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-16"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-05"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="5 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-16"
+                                      >
+                                        5
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-18"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-06"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="6 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-18"
+                                      >
+                                        6
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-20"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-07"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="7 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-20"
+                                      >
+                                        7
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-22"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-08"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="8 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-22"
+                                      >
+                                        8
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-24"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-09"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="9 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-24"
+                                      >
+                                        9
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-26"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-10"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="10 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-26"
+                                      >
+                                        10
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-28"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-11"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="11 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-28"
+                                      >
+                                        11
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-30"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-12"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="12 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-30"
+                                      >
+                                        12
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-32"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-13"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="13 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-32"
+                                      >
+                                        13
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-34"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-14"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="14 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-34"
+                                      >
+                                        14
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-36"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-15"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="15 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-36"
+                                      >
+                                        15
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-38"
+                                  class="fc-day fc-day-fri fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-16"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="16 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-38"
+                                      >
+                                        16
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-40"
+                                  class="fc-day fc-day-sat fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-17"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="17 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-40"
+                                      >
+                                        17
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-42"
+                                  class="fc-day fc-day-sun fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-18"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="18 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-42"
+                                      >
+                                        18
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-44"
+                                  class="fc-day fc-day-mon fc-day-past fc-daygrid-day"
+                                  data-date="2026-01-19"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="19 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-44"
+                                      >
+                                        19
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-46"
+                                  class="fc-day fc-day-tue fc-day-today fc-daygrid-day"
+                                  data-date="2026-01-20"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="20 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-46"
+                                      >
+                                        20
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-48"
+                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-21"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="21 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-48"
+                                      >
+                                        21
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-50"
+                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-22"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="22 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-50"
+                                      >
+                                        22
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-52"
+                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-23"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="23 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-52"
+                                      >
+                                        23
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-54"
+                                  class="fc-day fc-day-sat fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-24"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="24 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-54"
+                                      >
+                                        24
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-56"
+                                  class="fc-day fc-day-sun fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-25"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="25 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-56"
+                                      >
+                                        25
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-58"
+                                  class="fc-day fc-day-mon fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-26"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="26 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-58"
+                                      >
+                                        26
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-60"
+                                  class="fc-day fc-day-tue fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-27"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="27 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-60"
+                                      >
+                                        27
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-62"
+                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-28"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="28 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-62"
+                                      >
+                                        28
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-64"
+                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-29"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="29 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-64"
+                                      >
+                                        29
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-66"
+                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-30"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="30 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-66"
+                                      >
+                                        30
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-68"
+                                  class="fc-day fc-day-sat fc-day-future fc-daygrid-day"
+                                  data-date="2026-01-31"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="31 января 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-68"
+                                      >
+                                        31
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-70"
+                                  class="fc-day fc-day-sun fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-01"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="1 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-70"
+                                      >
+                                        1
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr
+                                role="row"
+                              >
+                                <td
+                                  aria-labelledby="fc-dom-72"
+                                  class="fc-day fc-day-mon fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-02"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="2 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-72"
+                                      >
+                                        2
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-74"
+                                  class="fc-day fc-day-tue fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-03"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="3 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-74"
+                                      >
+                                        3
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-76"
+                                  class="fc-day fc-day-wed fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-04"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="4 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-76"
+                                      >
+                                        4
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-78"
+                                  class="fc-day fc-day-thu fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-05"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="5 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-78"
+                                      >
+                                        5
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-80"
+                                  class="fc-day fc-day-fri fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-06"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="6 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-80"
+                                      >
+                                        6
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-82"
+                                  class="fc-day fc-day-sat fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-07"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="7 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-82"
+                                      >
+                                        7
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                                <td
+                                  aria-labelledby="fc-dom-84"
+                                  class="fc-day fc-day-sun fc-day-future fc-day-other fc-daygrid-day"
+                                  data-date="2026-02-08"
+                                  role="gridcell"
+                                >
+                                  <div
+                                    class="fc-daygrid-day-frame fc-scrollgrid-sync-inner"
+                                  >
+                                    <div
+                                      class="fc-daygrid-day-top"
+                                    >
+                                      <a
+                                        aria-label="8 февраля 2026 г."
+                                        class="fc-daygrid-day-number"
+                                        id="fc-dom-84"
+                                      >
+                                        8
+                                      </a>
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-events"
+                                    >
+                                      <div
+                                        class="fc-daygrid-day-bottom"
+                                        style="margin-top: 0px;"
+                                      />
+                                    </div>
+                                    <div
+                                      class="fc-daygrid-day-bg"
+                                    />
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+`;
