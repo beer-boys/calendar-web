@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Logo should render 1`] = `
+<div>
+  <span
+    class="vkuiTitle__sizeYNone vkuiTitle__level1 vkuiTypography__host vkuiTypography__normalize vkuiRootComponent__host"
+  >
+    <span>
+      X
+    </span>
+    -Calendar
+  </span>
+</div>
+`;
