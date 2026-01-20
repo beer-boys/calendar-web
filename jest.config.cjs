@@ -10,7 +10,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg|webp|ico)$': '<rootDir>/test/__mocks__/fileMock.cjs',
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg|webp|ico)$': '<rootDir>/src/test/__mocks__/fileMock.cjs',
   },
 
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
