@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Calendar should render calendar with events 1`] = `
-<div>
+<DocumentFragment>
   <li
     class="vkuiCard__host vkuiCard__modePlain vkuiRootComponent__host"
   >
@@ -1892,11 +1892,11 @@ exports[`Calendar should render calendar with events 1`] = `
       </div>
     </div>
   </li>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Calendar should render empty calendar 1`] = `
-<div>
+<DocumentFragment>
   <li
     class="vkuiCard__host vkuiCard__modePlain vkuiRootComponent__host"
   >
@@ -3567,5 +3567,5 @@ exports[`Calendar should render empty calendar 1`] = `
       </div>
     </div>
   </li>
-</div>
+</DocumentFragment>
 `;

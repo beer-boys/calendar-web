@@ -3,7 +3,7 @@ import { Logo } from '@/ui/Logo/Logo';
 
 describe('Logo', () => {
   it('should render', () => {
-    const { container } = renderWithStore(<Logo />);
-    expect(container).toMatchSnapshot();
+    const rendered = renderWithStore(<Logo />);
+    expect(rendered.asFragment()).toMatchSnapshot();
   });
 });

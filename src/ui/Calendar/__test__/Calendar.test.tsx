@@ -91,17 +91,17 @@ describe('Calendar', () => {
   };
 
   it('should render empty calendar', () => {
-    const { container } = renderWithStore(<Calendar />);
-    expect(container).toMatchSnapshot();
+    const rendered = renderWithStore(<Calendar />);
+    expect(rendered.asFragment()).toMatchSnapshot();
   });
 
   it('should render calendar with events', () => {
-    const { container } = renderWithStore(<Calendar />, {
+    const rendered = renderWithStore(<Calendar />, {
       preloadedState: {
         calendarEvents: calendarEventsState,
       },
     });
 
-    expect(container).toMatchSnapshot();
+    expect(rendered.asFragment()).toMatchSnapshot();
   });
 });
