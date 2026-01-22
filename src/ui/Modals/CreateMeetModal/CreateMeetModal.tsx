@@ -1,59 +1,84 @@
-import { Box, Button, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
-import { type ChangeEvent, memo, useState } from 'react';
+import { Box, Button, DateInput, FormItem, FormLayoutGroup, Input, Title } from '@vkontakte/vkui';
+import { type ChangeEvent, type InputEvent, memo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { defaultPriority } from '@/modules/calendarEvent/calendarEvent.constants';
+import { createMeet } from '@/modules/calendarEvent/calendarEvent.reducer';
 import { getContactsList } from '@/modules/contact/contact.selectors';
 import type { Contact } from '@/modules/contact/contact.type';
-import { closeModal } from '@/modules/modal/modal.reducer';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import {
   CreateMeetDataSchema,
   type CreateMeetErrorMessages,
   extractCreateMeetDataErrors,
 } from '@/ui/Modals/CreateMeetModal/CreateMeetModal.schema';
-import { PriorityInput } from '@/ui/PriorityInput/PriorityInput';
-import { SmartRangeDateInput } from '@/ui/SmartRangeDateInput/SmartRangeDateInput';
-import { useInputField } from '@/utils/formField';
+import { getFieldStatus, useInputField } from '@/utils/formField';
 
 export const CreateItemModal = memo(function CreateItemModal() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<CreateMeetErrorMessages>();
-  const { nameError, dateError } = errors || {};
+  const { nameError, dateError, startError, endError } = errors || {};
 
   const [name, setName] = useInputField('');
   const onNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.currentTarget.value);
-    setErrors({ dateError: errors?.dateError, nameError: undefined });
+
+    if (errors) {
+      setErrors({ ...errors, nameError: undefined });
+    }
   };
 
   const [date, setDate] = useState<Date>();
-  const onDate = (date?: Date) => {
+  const onDateChange = (date?: Date) => {
     setDate(date);
-    setErrors({ nameError: errors?.nameError, dateError: undefined });
+
+    if (errors) {
+      setErrors({ ...errors, dateError: undefined });
+    }
+  };
+
+  const [start, setStart] = useInputField('');
+  const onStartInput = (e: InputEvent<HTMLInputElement>) => {
+    setStart(e.currentTarget.value);
+
+    if (errors) {
+      setErrors({ ...errors, startError: undefined });
+    }
+  };
+
+  const [end, setEnd] = useInputField('');
+  const onEndInput = (e: InputEvent<HTMLInputElement>) => {
+    setEnd(e.currentTarget.value);
+
+    if (errors) {
+      setErrors({ ...errors, endError: undefined });
+    }
   };
 
   const [attendees, setAttendes] = useState<Contact[]>([]);
   const contacts = useSelector(getContactsList);
-  const [priority, setPriority] = useState(defaultPriority);
 
   const dispatch = useDispatch();
 
   const onSubmitButton = () => {
-    const result = CreateMeetDataSchema.safeParse({ name, date, attendees, priority });
+    setIsSubmitted(true);
+
+    const result = CreateMeetDataSchema.safeParse({ name, date, attendees, start, end });
     if (!result.success) {
       setErrors(extractCreateMeetDataErrors(result.error));
     } else {
       setErrors(undefined);
 
-      // const { name, date, attendees, priority } = result.data;
-      // dispatch(
-      //   createMeet({
-      //     meet: { title: name, date: date.getTime(), priority, attendees, period: defaultPeriod },
-      //   }),
-      // );
-
-      // Убрать, когда появятся походы в сеть
-      dispatch(closeModal());
+      const { name, date, attendees, start, end } = result.data;
+      dispatch(
+        //@ts-expect-error
+        createMeet({
+          name,
+          date: date.getTime(),
+          attendees: attendees.map(({ email }) => email),
+          start,
+          end,
+        }),
+      );
     }
   };
 
@@ -69,10 +94,17 @@ export const CreateItemModal = memo(function CreateItemModal() {
         <FormItem top="Участники" htmlFor="attendees">
           <AttendeesInput name="attendees" id="attendees" contacts={contacts} onAttendeesChange={setAttendes} />
         </FormItem>
-        <FormItem top="Приоритет" htmlFor="priority">
-          <PriorityInput name="priority" id="priority" value={priority} onPriorityChange={setPriority} />
+        <FormItem top="Дата" htmlFor="date" bottom={dateError} status={getFieldStatus(isSubmitted, dateError)} required>
+          <DateInput name="date" id="date" value={date} onChange={onDateChange} accessible />
         </FormItem>
-        <SmartRangeDateInput date={date} error={dateError} onDateChanged={onDate} />
+        <FormLayoutGroup mode="horizontal" segmented>
+          <FormItem top="Начало" htmlFor="begin" bottom={startError} status={getFieldStatus(isSubmitted, startError)} required>
+            <Input name="begin" id="begin" type="time" value={start} onInput={onStartInput} />
+          </FormItem>
+          <FormItem top="Конец" htmlFor="end" bottom={endError} status={getFieldStatus(isSubmitted, endError)} required>
+            <Input name="end" id="end" type="time" value={end} onInput={onEndInput} />
+          </FormItem>
+        </FormLayoutGroup>
       </FormLayoutGroup>
       <Box padding="2xl">
         <Button type="submit" size="m" onClick={onSubmitButton}>
