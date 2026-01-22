@@ -6,6 +6,7 @@ import { createMeet } from '@/modules/calendarEvent/calendarEvent.reducer';
 import { getContactsList } from '@/modules/contact/contact.selectors';
 import type { Contact } from '@/modules/contact/contact.type';
 import { bookRoom } from '@/modules/room/room.reducer';
+import { getRoomBookingDescById } from '@/modules/room/room.selectos';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import {
   CreateMeetDataSchema,
@@ -63,6 +64,8 @@ export const CreateItemModal = memo(function CreateItemModal() {
 
   const dispatch = useDispatch();
 
+  const description = useSelector((state) => getRoomBookingDescById(state, roomId));
+
   const onSubmitButton = () => {
     setIsSubmitted(true);
 
@@ -81,6 +84,7 @@ export const CreateItemModal = memo(function CreateItemModal() {
           attendees: attendees.map(({ email }) => email),
           start,
           end,
+          description,
         }),
       );
 

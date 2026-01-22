@@ -69,27 +69,32 @@ interface CreateMeetPayload {
   attendees: string[];
   start: string;
   end: string;
+  description?: string;
 }
 
-export const createMeet = createAsyncThunk(`${name}/createMeet`, async ({ name, date, attendees, start, end }: CreateMeetPayload) => {
-  const startDateTime = combineDateAndTime(date, start);
-  const endDateTime = combineDateAndTime(date, end);
+export const createMeet = createAsyncThunk(
+  `${name}/createMeet`,
+  async ({ name, date, attendees, start, end, description }: CreateMeetPayload) => {
+    const startDateTime = combineDateAndTime(date, start);
+    const endDateTime = combineDateAndTime(date, end);
 
-  const params = {
-    summary: name,
-    attendees: attendees.map((email) => ({ email })),
-    start: {
-      dateTime: startDateTime,
-      timeZone: 'Europe/Moscow',
-    },
-    end: {
-      dateTime: endDateTime,
-      timeZone: 'Europe/Moscow',
-    },
-  };
+    const params = {
+      summary: name,
+      attendees: attendees.map((email) => ({ email })),
+      start: {
+        dateTime: startDateTime,
+        timeZone: 'Europe/Moscow',
+      },
+      end: {
+        dateTime: endDateTime,
+        timeZone: 'Europe/Moscow',
+      },
+      description,
+    };
 
-  await createMeetAPICall(params);
-});
+    await createMeetAPICall(params);
+  },
+);
 
 export const createHabitMiddleware: Middleware<unknown, RootState> = (store) => (next) => (action) => {
   /** Я искренне не понимаю, как написаны типы в Redux */
