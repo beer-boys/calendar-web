@@ -5,12 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createMeet } from '@/modules/calendarEvent/calendarEvent.reducer';
 import { getContactsList } from '@/modules/contact/contact.selectors';
 import type { Contact } from '@/modules/contact/contact.type';
+import { bookRoom } from '@/modules/room/room.reducer';
 import { AttendeesInput } from '@/ui/AttendeesInput/AttendeesInput';
 import {
   CreateMeetDataSchema,
   type CreateMeetErrorMessages,
   extractCreateMeetDataErrors,
 } from '@/ui/Modals/CreateMeetModal/CreateMeetModal.schema';
+import { RoomSelector } from '@/ui/RoomSelector/RoomSelector';
 import { getFieldStatus, useInputField } from '@/utils/formField';
 
 export const CreateItemModal = memo(function CreateItemModal() {
@@ -54,6 +56,8 @@ export const CreateItemModal = memo(function CreateItemModal() {
     }
   };
 
+  const [roomId, setRoomId] = useState('');
+
   const [attendees, setAttendes] = useState<Contact[]>([]);
   const contacts = useSelector(getContactsList);
 
@@ -77,6 +81,16 @@ export const CreateItemModal = memo(function CreateItemModal() {
           attendees: attendees.map(({ email }) => email),
           start,
           end,
+        }),
+      );
+
+      dispatch(
+        //@ts-expect-error
+        bookRoom({
+          start,
+          end,
+          date: date.getTime(),
+          roomId,
         }),
       );
     }
@@ -105,6 +119,7 @@ export const CreateItemModal = memo(function CreateItemModal() {
             <Input name="end" id="end" type="time" value={end} onInput={onEndInput} />
           </FormItem>
         </FormLayoutGroup>
+        <RoomSelector onActiveRoomId={setRoomId} />
       </FormLayoutGroup>
       <Box padding="2xl">
         <Button type="submit" size="m" onClick={onSubmitButton}>

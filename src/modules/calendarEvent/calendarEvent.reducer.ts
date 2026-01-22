@@ -133,7 +133,7 @@ const initialState: CalendarEventsState = {
   loadedDates: { start: 0, end: 0 },
 };
 
-const calendarEventsSlice = createSlice({
+const calendarEventSlice = createSlice({
   name,
   initialState,
   reducers: {
@@ -161,5 +161,5 @@ const calendarEventsSlice = createSlice({
       }),
 });
 
-export const { setCurrentDates } = calendarEventsSlice.actions;
-export const { reducer: calendarEventsReducer } = calendarEventsSlice;
+export const { setCurrentDates } = calendarEventSlice.actions;
+export const { reducer: calendarEventReducer } = calendarEventSlice;

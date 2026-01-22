@@ -82,7 +82,7 @@ describe('Calendar', () => {
     },
   ];
 
-  const calendarEventsState = {
+  const calendarEventState = {
     events,
     isLoading: false,
     error: '',
@@ -98,7 +98,7 @@ describe('Calendar', () => {
   it('should render calendar with events', () => {
     const rendered = renderWithStore(<Calendar />, {
       preloadedState: {
-        calendarEvents: calendarEventsState,
+        calendarEvent: calendarEventState,
       },
     });
 
