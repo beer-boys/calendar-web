@@ -1,6 +1,6 @@
 import type { RootState } from '@/modules/store';
 
-const getCalendarEventsState = (state: RootState) => state.calendarEvents;
+const getCalendarEventsState = (state: RootState) => state.calendarEvent;
 
 export const getCalendarEvents = (state: RootState) => getCalendarEventsState(state).events;
 

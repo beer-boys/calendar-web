@@ -1,9 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { calendarEventsReducer, createHabitMiddleware } from '@/modules/calendarEvent/calendarEvent.reducer';
+import { calendarEventReducer, createHabitMiddleware } from '@/modules/calendarEvent/calendarEvent.reducer';
 import { calendarProviderReducer } from '@/modules/calendarProvider/calendarProvider.reducer';
 import { contactReducer } from '@/modules/contact/contact.module';
 import { modalReducer } from '@/modules/modal/modal.reducer';
+import { roomReducer } from '@/modules/room/room.reducer';
 import { userReducer } from '@/modules/user/user.reducer';
 
 export const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ export const rootReducer = combineReducers({
   contact: contactReducer,
   user: userReducer,
   calendarProvider: calendarProviderReducer,
-  calendarEvents: calendarEventsReducer,
+  calendarEvent: calendarEventReducer,
+  room: roomReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

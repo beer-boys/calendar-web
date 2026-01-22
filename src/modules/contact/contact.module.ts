@@ -42,6 +42,14 @@ const initialState: ContactState = {
       email: 'egorov.nikolay@mail.ru',
       name: 'Егоров Николай Павлович',
     },
+    'vmitsykson@itmo.ru': {
+      email: 'vmitsykson@itmo.ru',
+      name: 'Ицыксон Владимир Михайлович',
+    },
+    'averoshkin@itmo.ru': {
+      email: 'averoshkin@itmo.ru',
+      name: 'Ерошкин Александр Владимирович',
+    },
     'morozova.tatyana@mail.ru': {
       email: 'morozova.tatyana@mail.ru',
       name: 'Морозова Татьяна Андреевна',
