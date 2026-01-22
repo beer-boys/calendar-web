@@ -20,3 +20,13 @@ export const getActiveRoomsForInput = createSelector(getCurrentActiveRooms, (roo
     label: `${name} (${capacity} чел.)`,
   }));
 });
+
+export const getRoomBookingDescById = createSelector([getCurrentActiveRooms, (_, id: string) => id], (rooms, roomId) => {
+  const room = rooms.find(({ id }) => id === roomId);
+
+  if (!room) {
+    return 'Нет переговорной';
+  }
+
+  return `${room.name} (${room.capacity} чел.)`;
+});

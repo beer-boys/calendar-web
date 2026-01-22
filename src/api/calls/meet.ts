@@ -17,6 +17,7 @@ interface CreateMeetRequest {
   end: DateTimeWithTimezone;
   attendees?: Attendee[];
   summary: string;
+  description?: string;
 }
 
 type CreateMeetResponse = unknown;
