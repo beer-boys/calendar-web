@@ -2,13 +2,14 @@ import { createAsyncThunk, createSlice, type Middleware, type PayloadAction } fr
 
 import { getEventsAPICall } from '@/api/calls/events';
 import { createHabitAPICall } from '@/api/calls/habit';
+import { createMeetAPICall } from '@/api/calls/meet';
 import { getDateWeekday } from '@/modules/calendarEvent/calendarEvent.helpers';
 import { getCurrentDates } from '@/modules/calendarEvent/calendarEvent.selectors';
 import type { CalendarEvent, EventPeriod, EventPriority } from '@/modules/calendarEvent/calendarEvent.types';
 import { closeModal } from '@/modules/modal/modal.reducer';
 import type { RootState } from '@/modules/store';
+import { combineDateAndTime, timestampToIsoString } from '@/utils/dates';
 import { isReduxAction } from '@/utils/isAction';
-import { timestampToIsoString } from '@/utils/timestampToISOString';
 
 const name = 'calendarEvents';
 
@@ -62,6 +63,34 @@ export const createHabit = createAsyncThunk(
   },
 );
 
+interface CreateMeetPayload {
+  name: string;
+  date: number;
+  attendees: string[];
+  start: string;
+  end: string;
+}
+
+export const createMeet = createAsyncThunk(`${name}/createMeet`, async ({ name, date, attendees, start, end }: CreateMeetPayload) => {
+  const startDateTime = combineDateAndTime(date, start);
+  const endDateTime = combineDateAndTime(date, end);
+
+  const params = {
+    summary: name,
+    attendees: attendees.map((email) => ({ email })),
+    start: {
+      dateTime: startDateTime,
+      timeZone: 'Europe/Moscow',
+    },
+    end: {
+      dateTime: endDateTime,
+      timeZone: 'Europe/Moscow',
+    },
+  };
+
+  await createMeetAPICall(params);
+});
+
 export const createHabitMiddleware: Middleware<unknown, RootState> = (store) => (next) => (action) => {
   /** Я искренне не понимаю, как написаны типы в Redux */
   if (!isReduxAction(action)) {
@@ -69,18 +98,23 @@ export const createHabitMiddleware: Middleware<unknown, RootState> = (store) => 
     return;
   }
 
-  if (action.type !== createHabit.fulfilled.type) {
+  if (action.type == createHabit.fulfilled.type) {
+    const currentDates = getCurrentDates(store.getState());
+    // @ts-expect-error
+    store.dispatch(getEvents(currentDates));
+
+    store.dispatch(closeModal());
+
     next(action);
-    return;
+  } else if (action.type == createMeet.fulfilled.type) {
+    const currentDates = getCurrentDates(store.getState());
+    // @ts-expect-error
+    store.dispatch(getEvents(currentDates));
+
+    store.dispatch(closeModal());
+  } else {
+    next(action);
   }
-
-  const currentDates = getCurrentDates(store.getState());
-  // @ts-expect-error
-  store.dispatch(getEvents(currentDates));
-
-  store.dispatch(closeModal());
-
-  next(action);
 };
 
 interface CalendarEventsState {

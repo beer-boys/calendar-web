@@ -1167,7 +1167,7 @@ exports[`Calendar should render calendar with events 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-131"
-                                  class="fc-day fc-day-tue fc-day-today fc-daygrid-day"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
                                   data-date="2026-01-20"
                                   role="gridcell"
                                 >
@@ -1200,7 +1200,7 @@ exports[`Calendar should render calendar with events 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-133"
-                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
                                   data-date="2026-01-21"
                                   role="gridcell"
                                 >
@@ -1233,7 +1233,7 @@ exports[`Calendar should render calendar with events 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-135"
-                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
                                   data-date="2026-01-22"
                                   role="gridcell"
                                 >
@@ -1259,7 +1259,7 @@ exports[`Calendar should render calendar with events 1`] = `
                                         style="margin-top: 0px;"
                                       >
                                         <a
-                                          class="fc-event fc-event-start fc-event-end fc-event-future fc-daygrid-event fc-daygrid-dot-event"
+                                          class="fc-event fc-event-start fc-event-end fc-event-past fc-daygrid-event fc-daygrid-dot-event"
                                         >
                                           <div
                                             class="fc-daygrid-event-dot"
@@ -1288,7 +1288,7 @@ exports[`Calendar should render calendar with events 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-137"
-                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-fri fc-day-today fc-daygrid-day"
                                   data-date="2026-01-23"
                                   role="gridcell"
                                 >
@@ -2886,7 +2886,7 @@ exports[`Calendar should render empty calendar 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-46"
-                                  class="fc-day fc-day-tue fc-day-today fc-daygrid-day"
+                                  class="fc-day fc-day-tue fc-day-past fc-daygrid-day"
                                   data-date="2026-01-20"
                                   role="gridcell"
                                 >
@@ -2919,7 +2919,7 @@ exports[`Calendar should render empty calendar 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-48"
-                                  class="fc-day fc-day-wed fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-wed fc-day-past fc-daygrid-day"
                                   data-date="2026-01-21"
                                   role="gridcell"
                                 >
@@ -2952,7 +2952,7 @@ exports[`Calendar should render empty calendar 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-50"
-                                  class="fc-day fc-day-thu fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-thu fc-day-past fc-daygrid-day"
                                   data-date="2026-01-22"
                                   role="gridcell"
                                 >
@@ -2985,7 +2985,7 @@ exports[`Calendar should render empty calendar 1`] = `
                                 </td>
                                 <td
                                   aria-labelledby="fc-dom-52"
-                                  class="fc-day fc-day-fri fc-day-future fc-daygrid-day"
+                                  class="fc-day fc-day-fri fc-day-today fc-daygrid-day"
                                   data-date="2026-01-23"
                                   role="gridcell"
                                 >
